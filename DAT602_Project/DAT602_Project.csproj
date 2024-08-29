@@ -117,6 +117,12 @@
     <Compile Include="LandingForm.Designer.cs">
       <DependentUpon>LandingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LobbyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LobbyForm.Designer.cs">
+      <DependentUpon>LobbyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,8 +138,14 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GameForm.resx">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LandingForm.resx">
       <DependentUpon>LandingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LobbyForm.resx">
+      <DependentUpon>LobbyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

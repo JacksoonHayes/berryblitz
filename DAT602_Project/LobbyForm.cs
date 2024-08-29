@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace DAT602_Project
 {
-    public partial class LandingForm : Form
+    public partial class LobbyForm : Form
     {
-        public LandingForm()
+        public LobbyForm()
         {
             InitializeComponent();
         }
 
-        private void loginFormButton_Click(object sender, EventArgs e)
+        private void gamesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
         }
     }
 }

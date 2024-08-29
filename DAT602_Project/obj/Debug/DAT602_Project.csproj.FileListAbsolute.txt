@@ -43,3 +43,4 @@ C:\Users\jacks\source\repos\JacksoonHayes\DAT602_Project\DAT602_Project\obj\Debu
 C:\Users\jacks\source\repos\JacksoonHayes\DAT602_Project\DAT602_Project\obj\Debug\DAT602_Project.pdb
 C:\Users\jacks\source\repos\JacksoonHayes\DAT602_Project\DAT602_Project\obj\Debug\DAT602_Project.LandingForm.resources
 C:\Users\jacks\source\repos\JacksoonHayes\DAT602_Project\DAT602_Project\obj\Debug\DAT602_Project.RegisterForm.resources
+C:\Users\jacks\source\repos\JacksoonHayes\DAT602_Project\DAT602_Project\obj\Debug\DAT602_Project.LobbyForm.resources
