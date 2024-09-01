@@ -1,5 +1,3 @@
-# DAT602_Project
-
 # Multiplayer Berry-picking Game
 
 ## Overview
