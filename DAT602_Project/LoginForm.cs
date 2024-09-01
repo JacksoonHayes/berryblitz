@@ -30,10 +30,10 @@ namespace DAT602_Project
                 {
                     var dbAccess = new DataAccess();
                     string result = dbAccess.Login(usernameTextBox.Text, passwordTextBox.Text);
-                    new LobbyForm().Show();
 
                     if (result == "Login successful")
                     {
+                        new LobbyForm().Show();
                         MessageBox.Show(result, "Success");
                         Player.CurrentPlayer = new Player
                         {
@@ -53,5 +53,9 @@ namespace DAT602_Project
             }
         }
 
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

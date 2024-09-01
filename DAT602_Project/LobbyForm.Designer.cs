@@ -45,9 +45,9 @@
             this.playersListBox.FormattingEnabled = true;
             this.playersListBox.ItemHeight = 20;
             this.playersListBox.Items.AddRange(new object[] {
-            "John - 0",
-            "Jane - 100",
-            "Jim - 2000"});
+            "John",
+            "Jane",
+            "Jim"});
             this.playersListBox.Location = new System.Drawing.Point(12, 64);
             this.playersListBox.Name = "playersListBox";
             this.playersListBox.Size = new System.Drawing.Size(158, 144);
@@ -111,6 +111,7 @@
             this.logoutButton.TabIndex = 6;
             this.logoutButton.Text = "Log Out";
             this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // joinGameButton
             // 

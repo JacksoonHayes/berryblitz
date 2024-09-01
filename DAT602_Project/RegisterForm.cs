@@ -30,5 +30,10 @@ namespace DAT602_Project
                 MessageBox.Show(dbAccess.AddUserName(usernameTextBox.Text, passwordTextBox.Text));
             }
         }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
