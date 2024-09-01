@@ -17,5 +17,45 @@ namespace DAT602_Project
             InitializeComponent();
         }
 
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            if ((usernameTextBox.Text == "") || (passwordTextBox.Text == ""))
+            {
+                MessageBox.Show("Please fill in all fields", "Error");
+                return;
+            }
+            else
+            {
+                try
+                {
+                    var dbAccess = new DataAccess();
+                    string result = dbAccess.Login(usernameTextBox.Text, passwordTextBox.Text);
+
+                    if (result == "Login successful")
+                    {
+                        new LobbyForm().Show();
+                        MessageBox.Show(result, "Success");
+                        Player.CurrentPlayer = new Player
+                        {
+                            username = usernameTextBox.Text,
+                            score = 1000
+                        };
+                    }
+                    else
+                    {
+                        MessageBox.Show(result, "Login Failed");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while trying to log in: " + ex.Message, "Error");
+                }
+            }
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

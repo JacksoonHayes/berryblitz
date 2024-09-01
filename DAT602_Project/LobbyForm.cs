@@ -21,5 +21,29 @@ namespace DAT602_Project
         {
 
         }
+
+        private void newGameButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var dbAccess = new DataAccess();
+                MessageBox.Show(dbAccess.CreateGame());
+                new GameForm().Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while creating a game: " + ex.Message, "Error");
+            }
+        }
+
+        private void adminButton_Click(object sender, EventArgs e)
+        {
+            new AdminForm().Show();
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

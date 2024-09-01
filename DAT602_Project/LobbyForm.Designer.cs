@@ -45,9 +45,9 @@
             this.playersListBox.FormattingEnabled = true;
             this.playersListBox.ItemHeight = 20;
             this.playersListBox.Items.AddRange(new object[] {
-            "John - 0",
-            "Jane - 100",
-            "Jim - 2000"});
+            "John",
+            "Jane",
+            "Jim"});
             this.playersListBox.Location = new System.Drawing.Point(12, 64);
             this.playersListBox.Name = "playersListBox";
             this.playersListBox.Size = new System.Drawing.Size(158, 144);
@@ -68,12 +68,13 @@
             // 
             // newGameButton
             // 
-            this.newGameButton.Location = new System.Drawing.Point(196, 64);
+            this.newGameButton.Location = new System.Drawing.Point(191, 64);
             this.newGameButton.Name = "newGameButton";
-            this.newGameButton.Size = new System.Drawing.Size(83, 37);
+            this.newGameButton.Size = new System.Drawing.Size(91, 46);
             this.newGameButton.TabIndex = 2;
             this.newGameButton.Text = "New Game";
             this.newGameButton.UseVisualStyleBackColor = true;
+            this.newGameButton.Click += new System.EventHandler(this.newGameButton_Click);
             // 
             // playersLabel
             // 
@@ -110,12 +111,13 @@
             this.logoutButton.TabIndex = 6;
             this.logoutButton.Text = "Log Out";
             this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // joinGameButton
             // 
-            this.joinGameButton.Location = new System.Drawing.Point(196, 122);
+            this.joinGameButton.Location = new System.Drawing.Point(191, 131);
             this.joinGameButton.Name = "joinGameButton";
-            this.joinGameButton.Size = new System.Drawing.Size(83, 37);
+            this.joinGameButton.Size = new System.Drawing.Size(91, 44);
             this.joinGameButton.TabIndex = 7;
             this.joinGameButton.Text = "Join Game";
             this.joinGameButton.UseVisualStyleBackColor = true;
@@ -128,6 +130,7 @@
             this.adminButton.TabIndex = 8;
             this.adminButton.Text = "Administrator";
             this.adminButton.UseVisualStyleBackColor = true;
+            this.adminButton.Click += new System.EventHandler(this.adminButton_Click);
             // 
             // LobbyForm
             // 

@@ -16,5 +16,24 @@ namespace DAT602_Project
         {
             InitializeComponent();
         }
+
+        private void registerButton_Click(object sender, EventArgs e)
+        {
+            if ((usernameTextBox.Text == "") || (passwordTextBox.Text == ""))
+            {
+                MessageBox.Show("Please fill in all fields", "Error");
+                return;
+            }
+            else
+            {
+                var dbAccess = new DataAccess();
+                MessageBox.Show(dbAccess.AddUserName(usernameTextBox.Text, passwordTextBox.Text));
+            }
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

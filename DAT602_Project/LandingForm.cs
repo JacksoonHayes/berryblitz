@@ -19,7 +19,12 @@ namespace DAT602_Project
 
         private void loginFormButton_Click(object sender, EventArgs e)
         {
-           
+            new LoginForm().Show();
+        }
+
+        private void registerFormButton_Click(object sender, EventArgs e)
+        {
+            new RegisterForm().Show();
         }
     }
 }

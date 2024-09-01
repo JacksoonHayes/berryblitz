@@ -9,9 +9,8 @@ namespace DAT602_Project
     internal class Player
     {
         public static Player CurrentPlayer { get; set; }
-        public string UserName { get; set; }
-        public int Strength { get; set; }
-        public int X { get; set; }
-        public int Y { get; set; }
+        public int player_id { get; set; }
+        public string username { get; set; }
+        public int score { get; set; }  
     }
 }

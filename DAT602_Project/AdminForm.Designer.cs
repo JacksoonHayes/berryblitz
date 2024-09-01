@@ -32,22 +32,18 @@
             this.gamesListBox = new System.Windows.Forms.ListBox();
             this.playersLabel = new System.Windows.Forms.Label();
             this.gamesLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
+            this.editButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // playersListBox
             // 
             this.playersListBox.FormattingEnabled = true;
             this.playersListBox.ItemHeight = 16;
-            this.playersListBox.Items.AddRange(new object[] {
-            "John",
-            "Jane",
-            "Jim"});
             this.playersListBox.Location = new System.Drawing.Point(12, 57);
             this.playersListBox.Name = "playersListBox";
-            this.playersListBox.Size = new System.Drawing.Size(130, 212);
+            this.playersListBox.Size = new System.Drawing.Size(172, 212);
             this.playersListBox.TabIndex = 0;
             // 
             // gamesListBox
@@ -56,9 +52,9 @@
             this.gamesListBox.ItemHeight = 16;
             this.gamesListBox.Items.AddRange(new object[] {
             "John\'s Game (1)"});
-            this.gamesListBox.Location = new System.Drawing.Point(148, 57);
+            this.gamesListBox.Location = new System.Drawing.Point(190, 57);
             this.gamesListBox.Name = "gamesListBox";
-            this.gamesListBox.Size = new System.Drawing.Size(205, 212);
+            this.gamesListBox.Size = new System.Drawing.Size(163, 212);
             this.gamesListBox.TabIndex = 1;
             // 
             // playersLabel
@@ -73,53 +69,55 @@
             // gamesLabel
             // 
             this.gamesLabel.AutoSize = true;
-            this.gamesLabel.Location = new System.Drawing.Point(145, 38);
+            this.gamesLabel.Location = new System.Drawing.Point(187, 38);
             this.gamesLabel.Name = "gamesLabel";
             this.gamesLabel.Size = new System.Drawing.Size(96, 16);
             this.gamesLabel.TabIndex = 3;
             this.gamesLabel.Text = "Current Games";
             // 
-            // button1
+            // deleteButton
             // 
-            this.button1.Location = new System.Drawing.Point(229, 288);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 29);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = true;
+            this.deleteButton.Location = new System.Drawing.Point(229, 288);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(89, 29);
+            this.deleteButton.TabIndex = 4;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
-            // button3
+            // addButton
             // 
-            this.button3.Location = new System.Drawing.Point(12, 288);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 29);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Add Player";
-            this.button3.UseVisualStyleBackColor = true;
+            this.addButton.Location = new System.Drawing.Point(12, 288);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(89, 29);
+            this.addButton.TabIndex = 6;
+            this.addButton.Text = "Add Player";
+            this.addButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // editButton
             // 
-            this.button4.Location = new System.Drawing.Point(121, 288);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(89, 29);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Edit Player";
-            this.button4.UseVisualStyleBackColor = true;
+            this.editButton.Location = new System.Drawing.Point(121, 288);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(89, 29);
+            this.editButton.TabIndex = 7;
+            this.editButton.Text = "Edit Player";
+            this.editButton.UseVisualStyleBackColor = true;
             // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(365, 336);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.editButton);
+            this.Controls.Add(this.addButton);
+            this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.gamesLabel);
             this.Controls.Add(this.playersLabel);
             this.Controls.Add(this.gamesListBox);
             this.Controls.Add(this.playersListBox);
             this.Name = "AdminForm";
             this.Text = "Admin Console";
+            this.Load += new System.EventHandler(this.AdminForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,8 +129,8 @@
         private System.Windows.Forms.ListBox gamesListBox;
         private System.Windows.Forms.Label playersLabel;
         private System.Windows.Forms.Label gamesLabel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button editButton;
     }
 }
