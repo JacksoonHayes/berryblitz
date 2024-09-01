@@ -43,17 +43,19 @@ namespace DAT602_Project
             return (aDataSet.Tables[0].Rows[0])["Message"].ToString();
         }
 
-        public string AddUserName(string pUserName)
+        public string AddUserName(string pUserName, string pPassword)
         {
 
             List<MySqlParameter> p = new List<MySqlParameter>();
-            var aP = new MySqlParameter("@UserName", MySqlDbType.VarChar, 50);
-            aP.Value = pUserName;
-            p.Add(aP);
+            var aP_username = new MySqlParameter("@UserName", MySqlDbType.VarChar, 50);
+            var aP_password = new MySqlParameter("@Password", MySqlDbType.VarChar, 50);
+            aP_username.Value = pUserName;
+            aP_password.Value = pPassword;
+            p.Add(aP_username);
+            p.Add(aP_password);
 
 
-            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call AddUserName(@UserName)", p.ToArray());
-
+            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call AddUserName(@UserName, @Password)", p.ToArray());
             // expecting one table with one row
             return (aDataSet.Tables[0].Rows[0])["MESSAGE"].ToString();
         }

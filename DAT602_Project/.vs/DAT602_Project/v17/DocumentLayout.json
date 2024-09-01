@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\lobbyform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|solutionrelative:registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|solutionrelative:dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|c:\\users\\jacks\\source\\repos\\jacksoonhayes\\dat602_project\\dat602_project\\lobbyform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|solutionrelative:lobbyform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,14 +27,6 @@
       "RelativeMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|c:\\users\\jacks\\source\\repos\\jacksoonhayes\\dat602_project\\dat602_project\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|solutionrelative:dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|c:\\users\\jacks\\source\\repos\\jacksoonhayes\\dat602_project\\dat602_project\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|solutionrelative:registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|solutionrelative:registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -35,11 +35,11 @@
       "RelativeMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|solutionrelative:adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|c:\\users\\jacks\\source\\repos\\jacksoonhayes\\dat602_project\\dat602_project\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|solutionrelative:gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|c:\\users\\jacks\\source\\repos\\jacksoonhayes\\dat602_project\\dat602_project\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97CBBEA0-1153-4931-9076-34406181A69F}|DAT602_Project.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -70,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,38 +94,37 @@
               "RelativeToolTip": "Player.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-01T08:06:20.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-01T08:06:20.496Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "DataAccess.cs",
               "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\DataAccess.cs",
               "RelativeDocumentMoniker": "DataAccess.cs",
               "ToolTip": "C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\DataAccess.cs",
               "RelativeToolTip": "DataAccess.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAAACoAAAA4AAAA",
+              "ViewState": "AQIAACsAAAAAAAAAAAAAADkAAACJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-01T08:02:31.684Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "RegisterForm.cs",
               "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\RegisterForm.cs",
               "RelativeDocumentMoniker": "RegisterForm.cs",
               "ToolTip": "C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\RegisterForm.cs",
               "RelativeToolTip": "RegisterForm.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAAB0AAABKAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAIAwwB0AAABfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-01T09:46:58.878Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\LoginForm.cs",
               "RelativeDocumentMoniker": "LoginForm.cs",
@@ -133,8 +132,7 @@
               "RelativeToolTip": "LoginForm.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAAACAAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T07:39:29.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T07:39:29.031Z"
             },
             {
               "$type": "Document",
@@ -149,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AdminForm.cs",
               "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\AdminForm.cs",
               "RelativeDocumentMoniker": "AdminForm.cs",
@@ -157,8 +155,7 @@
               "RelativeToolTip": "AdminForm.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAASwBIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T00:24:28.249Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-29T00:24:28.249Z"
             },
             {
               "$type": "Document",
@@ -169,12 +166,11 @@
               "ToolTip": "C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\AdminForm.cs [Design]",
               "RelativeToolTip": "AdminForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T00:16:06.907Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-29T00:16:06.907Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "GameForm.cs",
               "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\GameForm.cs",
               "RelativeDocumentMoniker": "GameForm.cs",
@@ -182,8 +178,7 @@
               "RelativeToolTip": "GameForm.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAYwBUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T23:41:01.046Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-28T23:41:01.046Z"
             },
             {
               "$type": "Document",
@@ -194,18 +189,17 @@
               "ToolTip": "C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\GameForm.cs [Design]",
               "RelativeToolTip": "GameForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T23:40:47.041Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-28T23:40:47.041Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "LobbyForm.cs",
               "DocumentMoniker": "C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\LobbyForm.cs",
               "RelativeDocumentMoniker": "LobbyForm.cs",
               "ToolTip": "C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\LobbyForm.cs",
               "RelativeToolTip": "LobbyForm.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAuwB8AAAAjAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAuwCEAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-28T23:19:30.378Z",
               "EditorCaption": ""
@@ -219,8 +213,7 @@
               "ToolTip": "C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\LobbyForm.cs [Design]",
               "RelativeToolTip": "LobbyForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T22:35:04.171Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-28T22:35:04.171Z"
             },
             {
               "$type": "Document",
@@ -254,8 +247,7 @@
               "ToolTip": "C:\\Users\\jacks\\source\\repos\\JacksoonHayes\\DAT602_Project\\DAT602_Project\\LoginForm.cs [Design]",
               "RelativeToolTip": "LoginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T22:10:04.429Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-28T22:10:04.429Z"
             },
             {
               "$type": "Document",
