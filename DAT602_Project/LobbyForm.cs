@@ -21,5 +21,15 @@ namespace DAT602_Project
         {
 
         }
+
+        private void newGameButton_Click(object sender, EventArgs e)
+        {
+            new GameForm().Show();
+        }
+
+        private void adminButton_Click(object sender, EventArgs e)
+        {
+            new AdminForm().Show();
+        }
     }
 }

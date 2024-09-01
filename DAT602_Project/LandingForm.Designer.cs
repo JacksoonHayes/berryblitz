@@ -51,6 +51,7 @@
             this.registerFormButton.TabIndex = 1;
             this.registerFormButton.Text = "Register";
             this.registerFormButton.UseVisualStyleBackColor = true;
+            this.registerFormButton.Click += new System.EventHandler(this.registerFormButton_Click);
             // 
             // titleLabel
             // 
