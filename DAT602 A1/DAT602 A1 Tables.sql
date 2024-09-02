@@ -2,6 +2,10 @@ DROP DATABASE IF EXISTS dat602;
 CREATE DATABASE dat602;
 USE dat602;
 
+DROP USER if exists 'sapo'@'localhost';
+CREATE USER 'sapo'@'localhost' IDENTIFIED BY '53211';
+GRANT ALL ON dat602.* TO 'sapo'@'localhost';
+
 DELIMITER //
 DROP PROCEDURE IF EXISTS MakeTables//
 CREATE PROCEDURE MakeTables()
@@ -12,14 +16,14 @@ BEGIN
     CREATE TABLE player (
         player_id INT PRIMARY KEY AUTO_INCREMENT,
         username VARCHAR(50) NOT NULL,
-        password VARCHAR(50) NOT NULL,
-        email VARCHAR(100) NOT NULL UNIQUE,
+        `password` VARCHAR(50) NOT NULL DEFAULT '123',
+        email VARCHAR(100) NOT NULL DEFAULT 'test@email.com', -- Will be unique on release
         score INT DEFAULT 0,
         total_berries_collected INT DEFAULT 0,
         games_played INT DEFAULT 0,
         games_won INT DEFAULT 0,
         login_attempts INT DEFAULT 0,
-        is_admin BOOLEAN
+        is_admin BOOLEAN DEFAULT false
     );
 
     DROP TABLE IF EXISTS game;
@@ -27,7 +31,7 @@ BEGIN
         game_id INT PRIMARY KEY AUTO_INCREMENT,
         player_id INT, 
         hometile_id INT, 
-        status VARCHAR(25) DEFAULT 'active',
+        `status` VARCHAR(25) DEFAULT 'active',
         start_time TIME NOT NULL,
         current_turn VARCHAR(75),
         session_id INT,
@@ -57,7 +61,7 @@ BEGIN
     DROP TABLE IF EXISTS item;
     CREATE TABLE item (
         item_id INT PRIMARY KEY AUTO_INCREMENT,
-        type VARCHAR(100) NOT NULL,
+        `type` VARCHAR(100) NOT NULL,
         points INT NOT NULL
     );
 
@@ -103,15 +107,15 @@ DELIMITER ;
 call MakeTables();
 
 -- Insert Players
-INSERT INTO Player (username, password, email, score, total_berries_collected, games_played, games_won, login_attempts, is_admin)
+INSERT INTO Player (username, `password`, email, score, total_berries_collected, games_played, games_won, login_attempts, is_admin)
 VALUES ('John', 'password1', 'player1@example.com', 100, 20, 5, 2, 1, false);
 
-INSERT INTO Player (username, password, email, score, total_berries_collected, games_played, games_won, login_attempts, is_admin)
+INSERT INTO Player (username, `password`, email, score, total_berries_collected, games_played, games_won, login_attempts, is_admin)
 VALUES ('Jim', 'password2', 'player2@example.com', 150, 30, 10, 5, 0, true);
 
 -- Insert Items
 INSERT INTO Item (type, points)
-VALUES ('Berry', 10), ('Jewel', 50);
+VALUES ('Berry', 50), ('Poisonous Berry', -50);
 
 -- Insert Inventory for Players
 INSERT INTO Inventory (player_id, quantity)
@@ -199,3 +203,98 @@ SELECT * FROM Game_Player;
 SELECT * FROM Tile;
 SELECT * FROM Chat;
 
+
+-- Procedures for data access
+DROP PROCEDURE IF EXISTS Login;
+DELIMITER //
+CREATE PROCEDURE `Login`(IN pUserName VARCHAR(50), IN pPassword VARCHAR(50))
+BEGIN
+    DECLARE userCount INT;
+    DECLARE message VARCHAR(255);
+
+    SELECT count(*) INTO userCount
+    FROM player
+    WHERE username = pUserName AND `password` = pPassword;
+
+    IF userCount > 0 THEN
+        SET message = 'Login successful';
+    ELSE
+        SET message = 'Invalid username or password';
+    END IF;
+
+    SELECT message;
+END //
+DELIMITER ;
+
+SELECT username, login_attempts
+FROM player;
+
+DROP PROCEDURE IF EXISTS AddUserName;
+DELIMITER //
+CREATE PROCEDURE AddUserName(IN pUserName VARCHAR(50), IN pPassword VARCHAR(50))
+BEGIN
+  IF EXISTS (SELECT * 
+     FROM player
+     WHERE username = pUserName) THEN
+  BEGIN
+     SELECT 'Account with that name already exists!' AS MESSAGE;
+  END;
+  ELSE 
+     INSERT INTO player(username,`password`,score)
+     VALUE (pUserName, pPassword, 1000);
+     SELECT 'Added new user' AS MESSAGE;
+  END IF;
+  
+END //
+DELIMITER ;
+
+DROP PROCEDURE IF EXISTS CreateGame;
+DELIMITER //
+CREATE PROCEDURE CreateGame(IN pStartTime TIME)
+BEGIN
+    DECLARE message VARCHAR(255);
+    
+    INSERT INTO game (start_time) VALUES (pStartTime);
+
+    SET message = 'Game created successfully!';
+    SELECT message AS Message;
+END //
+DELIMITER ;
+
+DROP PROCEDURE IF EXISTS GetAllPlayers;
+DELIMITER //
+CREATE PROCEDURE GetAllPlayers()
+BEGIN
+    SELECT username, score FROM player;
+END //
+DELIMITER ;
+
+DROP PROCEDURE IF EXISTS GetAllGames;
+DELIMITER //
+CREATE PROCEDURE GetAllGames()
+BEGIN
+    SELECT game_id FROM game;
+END //
+DELIMITER ;
+
+/*
+DROP PROCEDURE IF EXISTS DeletePlayer;
+DELIMITER //
+CREATE PROCEDURE DeletePlayer(IN pPlayerId INT)
+BEGIN
+    DELETE FROM player WHERE player_id = pPlayerId;
+
+    SELECT 'Player deleted successfully' AS Message;
+END //
+DELIMITER ;
+
+DROP PROCEDURE IF EXISTS DeleteGame;
+DELIMITER //
+CREATE PROCEDURE DeleteGame(IN pGameId INT)
+BEGIN
+    DELETE FROM game WHERE game_id = pGameId;
+
+    SELECT 'Game deleted successfully' AS Message;
+END //
+DELIMITER ;
+*/
