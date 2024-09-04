@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DAT602_Project
 {
-    public partial class LoginForm : Form
+    public partial class loginForm : Form
     {
-        public LoginForm()
+        public loginForm()
         {
             InitializeComponent();
         }
@@ -33,7 +33,7 @@ namespace DAT602_Project
 
                     if (result == "Login successful")
                     {
-                        new LobbyForm().Show();
+                        new lobbyForm().Show();
                         MessageBox.Show(result, "Success");
                         Player.CurrentPlayer = new Player
                         {

@@ -1,6 +1,6 @@
 ﻿namespace DAT602_Project
 {
-    partial class GameForm
+    partial class gameForm
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,7 @@
             // 
             // gameGrid
             // 
+            this.gameGrid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gameGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gameGrid.Location = new System.Drawing.Point(12, 57);
             this.gameGrid.Name = "gameGrid";
@@ -51,6 +52,7 @@
             // 
             // gameLabel
             // 
+            this.gameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gameLabel.AutoSize = true;
             this.gameLabel.Location = new System.Drawing.Point(12, 9);
             this.gameLabel.Name = "gameLabel";
@@ -60,6 +62,7 @@
             // 
             // chatListBox
             // 
+            this.chatListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chatListBox.FormattingEnabled = true;
             this.chatListBox.ItemHeight = 16;
             this.chatListBox.Items.AddRange(new object[] {
@@ -75,6 +78,7 @@
             // 
             // messageTextBox
             // 
+            this.messageTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.messageTextBox.Location = new System.Drawing.Point(546, 259);
             this.messageTextBox.Name = "messageTextBox";
             this.messageTextBox.Size = new System.Drawing.Size(161, 22);
@@ -83,6 +87,7 @@
             // 
             // sendButton
             // 
+            this.sendButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.sendButton.Location = new System.Drawing.Point(640, 287);
             this.sendButton.Name = "sendButton";
             this.sendButton.Size = new System.Drawing.Size(67, 27);
@@ -92,6 +97,7 @@
             // 
             // leaveButton
             // 
+            this.leaveButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.leaveButton.Location = new System.Drawing.Point(607, 411);
             this.leaveButton.Name = "leaveButton";
             this.leaveButton.Size = new System.Drawing.Size(100, 27);
@@ -101,6 +107,7 @@
             // 
             // timeLabel
             // 
+            this.timeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.timeLabel.AutoSize = true;
             this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeLabel.Location = new System.Drawing.Point(12, 38);
@@ -111,6 +118,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 386);
@@ -121,6 +129,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 416);
@@ -129,7 +138,7 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Jim\'s Score: 100";
             // 
-            // GameForm
+            // gameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,7 +152,8 @@
             this.Controls.Add(this.chatListBox);
             this.Controls.Add(this.gameLabel);
             this.Controls.Add(this.gameGrid);
-            this.Name = "GameForm";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "gameForm";
             this.Text = "GameForm";
             ((System.ComponentModel.ISupportInitialize)(this.gameGrid)).EndInit();
             this.ResumeLayout(false);

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DAT602_Project
 {
-    public partial class LobbyForm : Form
+    public partial class lobbyForm : Form
     {
-        public LobbyForm()
+        public lobbyForm()
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace DAT602_Project
             {
                 var dbAccess = new DataAccess();
                 MessageBox.Show(dbAccess.CreateGame());
-                new GameForm().Show();
+                new gameForm().Show();
             }
             catch (Exception ex)
             {
@@ -38,7 +38,7 @@ namespace DAT602_Project
 
         private void adminButton_Click(object sender, EventArgs e)
         {
-            new AdminForm().Show();
+            new adminForm().Show();
         }
 
         private void logoutButton_Click(object sender, EventArgs e)

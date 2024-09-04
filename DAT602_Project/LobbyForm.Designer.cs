@@ -1,6 +1,6 @@
 ﻿namespace DAT602_Project
 {
-    partial class LobbyForm
+    partial class lobbyForm
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,7 @@
             // 
             // playersListBox
             // 
+            this.playersListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.playersListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playersListBox.FormattingEnabled = true;
             this.playersListBox.ItemHeight = 20;
@@ -55,6 +56,7 @@
             // 
             // gamesListBox
             // 
+            this.gamesListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gamesListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gamesListBox.FormattingEnabled = true;
             this.gamesListBox.ItemHeight = 20;
@@ -68,6 +70,7 @@
             // 
             // newGameButton
             // 
+            this.newGameButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.newGameButton.Location = new System.Drawing.Point(191, 64);
             this.newGameButton.Name = "newGameButton";
             this.newGameButton.Size = new System.Drawing.Size(91, 46);
@@ -78,6 +81,7 @@
             // 
             // playersLabel
             // 
+            this.playersLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.playersLabel.AutoSize = true;
             this.playersLabel.Location = new System.Drawing.Point(12, 45);
             this.playersLabel.Name = "playersLabel";
@@ -87,6 +91,7 @@
             // 
             // gamesLabel
             // 
+            this.gamesLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gamesLabel.AutoSize = true;
             this.gamesLabel.Location = new System.Drawing.Point(302, 45);
             this.gamesLabel.Name = "gamesLabel";
@@ -96,6 +101,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
@@ -105,6 +111,7 @@
             // 
             // logoutButton
             // 
+            this.logoutButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.logoutButton.Location = new System.Drawing.Point(15, 260);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(81, 27);
@@ -115,6 +122,7 @@
             // 
             // joinGameButton
             // 
+            this.joinGameButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.joinGameButton.Location = new System.Drawing.Point(191, 131);
             this.joinGameButton.Name = "joinGameButton";
             this.joinGameButton.Size = new System.Drawing.Size(91, 44);
@@ -124,6 +132,7 @@
             // 
             // adminButton
             // 
+            this.adminButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.adminButton.Location = new System.Drawing.Point(348, 260);
             this.adminButton.Name = "adminButton";
             this.adminButton.Size = new System.Drawing.Size(115, 27);
@@ -132,7 +141,7 @@
             this.adminButton.UseVisualStyleBackColor = true;
             this.adminButton.Click += new System.EventHandler(this.adminButton_Click);
             // 
-            // LobbyForm
+            // lobbyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -146,7 +155,8 @@
             this.Controls.Add(this.newGameButton);
             this.Controls.Add(this.gamesListBox);
             this.Controls.Add(this.playersListBox);
-            this.Name = "LobbyForm";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "lobbyForm";
             this.Text = "Lobby";
             this.ResumeLayout(false);
             this.PerformLayout();

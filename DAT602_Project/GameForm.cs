@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DAT602_Project
 {
-    public partial class GameForm : Form
+    public partial class gameForm : Form
     {
-        public GameForm()
+        public gameForm()
         {
             InitializeComponent();
         }

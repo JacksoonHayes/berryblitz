@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DAT602_Project
 {
-    public partial class AdminForm : Form
+    public partial class adminForm : Form
     {
-        public AdminForm()
+        public adminForm()
         {
             InitializeComponent();
         }

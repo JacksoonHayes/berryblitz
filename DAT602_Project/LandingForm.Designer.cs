@@ -1,6 +1,6 @@
 ﻿namespace DAT602_Project
 {
-    partial class LandingForm
+    partial class landingForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,11 +31,13 @@
             this.loginFormButton = new System.Windows.Forms.Button();
             this.registerFormButton = new System.Windows.Forms.Button();
             this.titleLabel = new System.Windows.Forms.Label();
+            this.closeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // loginFormButton
             // 
-            this.loginFormButton.Location = new System.Drawing.Point(143, 126);
+            this.loginFormButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.loginFormButton.Location = new System.Drawing.Point(143, 127);
             this.loginFormButton.Name = "loginFormButton";
             this.loginFormButton.Size = new System.Drawing.Size(132, 34);
             this.loginFormButton.TabIndex = 0;
@@ -45,7 +47,8 @@
             // 
             // registerFormButton
             // 
-            this.registerFormButton.Location = new System.Drawing.Point(143, 193);
+            this.registerFormButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.registerFormButton.Location = new System.Drawing.Point(143, 194);
             this.registerFormButton.Name = "registerFormButton";
             this.registerFormButton.Size = new System.Drawing.Size(132, 34);
             this.registerFormButton.TabIndex = 1;
@@ -55,24 +58,38 @@
             // 
             // titleLabel
             // 
+            this.titleLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("MV Boli", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(94, 34);
+            this.titleLabel.Location = new System.Drawing.Point(94, 35);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(226, 52);
             this.titleLabel.TabIndex = 2;
             this.titleLabel.Text = "Berry Blitz";
             // 
-            // LandingForm
+            // closeButton
+            // 
+            this.closeButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.closeButton.Location = new System.Drawing.Point(325, 274);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(75, 23);
+            this.closeButton.TabIndex = 13;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = true;
+            // 
+            // landingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 292);
+            this.ClientSize = new System.Drawing.Size(425, 320);
+            this.Controls.Add(this.closeButton);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.registerFormButton);
             this.Controls.Add(this.loginFormButton);
-            this.Name = "LandingForm";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "landingForm";
             this.Text = "Login / Register";
+            this.Load += new System.EventHandler(this.LandingForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,5 +100,6 @@
         private System.Windows.Forms.Button loginFormButton;
         private System.Windows.Forms.Button registerFormButton;
         private System.Windows.Forms.Label titleLabel;
+        private System.Windows.Forms.Button closeButton;
     }
 }

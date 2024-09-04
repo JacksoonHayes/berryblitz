@@ -1,6 +1,6 @@
 ﻿namespace DAT602_Project
 {
-    partial class LoginForm
+    partial class loginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.titleLabel = new System.Windows.Forms.Label();
-            this.cancelButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
@@ -39,6 +39,7 @@
             // 
             // titleLabel
             // 
+            this.titleLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("MV Boli", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.Location = new System.Drawing.Point(96, 39);
@@ -47,19 +48,20 @@
             this.titleLabel.TabIndex = 3;
             this.titleLabel.Text = "Berry Blitz";
             // 
-            // cancelButton
+            // closeButton
             // 
-            this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelButton.Location = new System.Drawing.Point(323, 344);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(75, 23);
-            this.cancelButton.TabIndex = 4;
-            this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            this.closeButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.closeButton.Location = new System.Drawing.Point(323, 344);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(75, 23);
+            this.closeButton.TabIndex = 4;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // usernameTextBox
             // 
+            this.usernameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.usernameTextBox.Location = new System.Drawing.Point(128, 138);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(169, 22);
@@ -67,6 +69,7 @@
             // 
             // passwordTextBox
             // 
+            this.passwordTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.passwordTextBox.Location = new System.Drawing.Point(128, 194);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(169, 22);
@@ -74,6 +77,7 @@
             // 
             // loginButton
             // 
+            this.loginButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.loginButton.Location = new System.Drawing.Point(165, 254);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(98, 31);
@@ -84,6 +88,7 @@
             // 
             // usernameLabel
             // 
+            this.usernameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Location = new System.Drawing.Point(125, 119);
             this.usernameLabel.Name = "usernameLabel";
@@ -93,6 +98,7 @@
             // 
             // passwordLabel
             // 
+            this.passwordLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Location = new System.Drawing.Point(125, 175);
             this.passwordLabel.Name = "passwordLabel";
@@ -100,7 +106,7 @@
             this.passwordLabel.TabIndex = 10;
             this.passwordLabel.Text = "Password:";
             // 
-            // LoginForm
+            // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,9 +116,10 @@
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.usernameTextBox);
-            this.Controls.Add(this.cancelButton);
+            this.Controls.Add(this.closeButton);
             this.Controls.Add(this.titleLabel);
-            this.Name = "LoginForm";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "loginForm";
             this.Text = "Login Form";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -122,7 +129,7 @@
         #endregion
 
         private System.Windows.Forms.Label titleLabel;
-        private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Button loginButton;

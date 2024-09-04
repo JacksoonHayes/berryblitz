@@ -10,21 +10,26 @@ using System.Windows.Forms;
 
 namespace DAT602_Project
 {
-    public partial class LandingForm : Form
+    public partial class landingForm : Form
     {
-        public LandingForm()
+        public landingForm()
         {
             InitializeComponent();
         }
 
         private void loginFormButton_Click(object sender, EventArgs e)
         {
-            new LoginForm().Show();
+            new loginForm().Show();
         }
 
         private void registerFormButton_Click(object sender, EventArgs e)
         {
             new RegisterForm().Show();
+        }
+
+        private void LandingForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

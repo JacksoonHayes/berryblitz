@@ -1,6 +1,6 @@
 ﻿namespace DAT602_Project
 {
-    partial class AdminForm
+    partial class adminForm
     {
         /// <summary>
         /// Required designer variable.
@@ -39,6 +39,7 @@
             // 
             // playersListBox
             // 
+            this.playersListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.playersListBox.FormattingEnabled = true;
             this.playersListBox.ItemHeight = 16;
             this.playersListBox.Location = new System.Drawing.Point(12, 57);
@@ -48,6 +49,7 @@
             // 
             // gamesListBox
             // 
+            this.gamesListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gamesListBox.FormattingEnabled = true;
             this.gamesListBox.ItemHeight = 16;
             this.gamesListBox.Items.AddRange(new object[] {
@@ -59,6 +61,7 @@
             // 
             // playersLabel
             // 
+            this.playersLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.playersLabel.AutoSize = true;
             this.playersLabel.Location = new System.Drawing.Point(9, 38);
             this.playersLabel.Name = "playersLabel";
@@ -68,6 +71,7 @@
             // 
             // gamesLabel
             // 
+            this.gamesLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gamesLabel.AutoSize = true;
             this.gamesLabel.Location = new System.Drawing.Point(187, 38);
             this.gamesLabel.Name = "gamesLabel";
@@ -77,16 +81,17 @@
             // 
             // deleteButton
             // 
+            this.deleteButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.deleteButton.Location = new System.Drawing.Point(229, 288);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(89, 29);
             this.deleteButton.TabIndex = 4;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
-
             // 
             // addButton
             // 
+            this.addButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.addButton.Location = new System.Drawing.Point(12, 288);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(89, 29);
@@ -96,6 +101,7 @@
             // 
             // editButton
             // 
+            this.editButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.editButton.Location = new System.Drawing.Point(121, 288);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(89, 29);
@@ -103,7 +109,7 @@
             this.editButton.Text = "Edit Player";
             this.editButton.UseVisualStyleBackColor = true;
             // 
-            // AdminForm
+            // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -115,7 +121,8 @@
             this.Controls.Add(this.playersLabel);
             this.Controls.Add(this.gamesListBox);
             this.Controls.Add(this.playersListBox);
-            this.Name = "AdminForm";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "adminForm";
             this.Text = "Admin Console";
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.ResumeLayout(false);

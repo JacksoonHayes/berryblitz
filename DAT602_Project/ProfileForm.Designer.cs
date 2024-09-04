@@ -1,6 +1,6 @@
 ﻿namespace DAT602_Project
 {
-    partial class ProfileForm
+    partial class profileForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,11 +35,12 @@
             this.submitButton = new System.Windows.Forms.Button();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.cancelButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // emailLabel
             // 
+            this.emailLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.emailLabel.AutoSize = true;
             this.emailLabel.Location = new System.Drawing.Point(80, 158);
             this.emailLabel.Name = "emailLabel";
@@ -49,6 +50,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Location = new System.Drawing.Point(83, 177);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(169, 22);
@@ -56,6 +58,7 @@
             // 
             // passwordLabel
             // 
+            this.passwordLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Location = new System.Drawing.Point(80, 99);
             this.passwordLabel.Name = "passwordLabel";
@@ -65,6 +68,7 @@
             // 
             // usernameLabel
             // 
+            this.usernameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Location = new System.Drawing.Point(80, 42);
             this.usernameLabel.Name = "usernameLabel";
@@ -74,7 +78,7 @@
             // 
             // submitButton
             // 
-            this.submitButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.submitButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.submitButton.Location = new System.Drawing.Point(117, 239);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(98, 31);
@@ -84,6 +88,7 @@
             // 
             // passwordTextBox
             // 
+            this.passwordTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.passwordTextBox.Location = new System.Drawing.Point(83, 118);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(169, 22);
@@ -91,22 +96,23 @@
             // 
             // usernameTextBox
             // 
+            this.usernameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.usernameTextBox.Location = new System.Drawing.Point(83, 61);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(169, 22);
             this.usernameTextBox.TabIndex = 23;
             // 
-            // cancelButton
+            // closeButton
             // 
-            this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelButton.Location = new System.Drawing.Point(233, 314);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(75, 23);
-            this.cancelButton.TabIndex = 22;
-            this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
+            this.closeButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.closeButton.Location = new System.Drawing.Point(233, 314);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(75, 23);
+            this.closeButton.TabIndex = 22;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = true;
             // 
-            // ProfileForm
+            // profileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -118,8 +124,9 @@
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.usernameTextBox);
-            this.Controls.Add(this.cancelButton);
-            this.Name = "ProfileForm";
+            this.Controls.Add(this.closeButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "profileForm";
             this.Text = "Profile Form";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,6 +142,6 @@
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.TextBox usernameTextBox;
-        private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.Button closeButton;
     }
 }
