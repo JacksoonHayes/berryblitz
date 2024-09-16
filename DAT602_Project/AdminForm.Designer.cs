@@ -42,7 +42,7 @@
             this.playersListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.playersListBox.FormattingEnabled = true;
             this.playersListBox.ItemHeight = 16;
-            this.playersListBox.Location = new System.Drawing.Point(12, 57);
+            this.playersListBox.Location = new System.Drawing.Point(12, 40);
             this.playersListBox.Name = "playersListBox";
             this.playersListBox.Size = new System.Drawing.Size(172, 212);
             this.playersListBox.TabIndex = 0;
@@ -54,7 +54,7 @@
             this.gamesListBox.ItemHeight = 16;
             this.gamesListBox.Items.AddRange(new object[] {
             "John\'s Game (1)"});
-            this.gamesListBox.Location = new System.Drawing.Point(190, 57);
+            this.gamesListBox.Location = new System.Drawing.Point(190, 40);
             this.gamesListBox.Name = "gamesListBox";
             this.gamesListBox.Size = new System.Drawing.Size(163, 212);
             this.gamesListBox.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             this.playersLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.playersLabel.AutoSize = true;
-            this.playersLabel.Location = new System.Drawing.Point(9, 38);
+            this.playersLabel.Location = new System.Drawing.Point(9, 21);
             this.playersLabel.Name = "playersLabel";
             this.playersLabel.Size = new System.Drawing.Size(53, 16);
             this.playersLabel.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             this.gamesLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gamesLabel.AutoSize = true;
-            this.gamesLabel.Location = new System.Drawing.Point(187, 38);
+            this.gamesLabel.Location = new System.Drawing.Point(187, 21);
             this.gamesLabel.Name = "gamesLabel";
             this.gamesLabel.Size = new System.Drawing.Size(96, 16);
             this.gamesLabel.TabIndex = 3;
@@ -82,7 +82,7 @@
             // deleteButton
             // 
             this.deleteButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.deleteButton.Location = new System.Drawing.Point(229, 288);
+            this.deleteButton.Location = new System.Drawing.Point(229, 271);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(89, 29);
             this.deleteButton.TabIndex = 4;
@@ -92,7 +92,7 @@
             // addButton
             // 
             this.addButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addButton.Location = new System.Drawing.Point(12, 288);
+            this.addButton.Location = new System.Drawing.Point(12, 271);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(89, 29);
             this.addButton.TabIndex = 6;
@@ -102,7 +102,7 @@
             // editButton
             // 
             this.editButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.editButton.Location = new System.Drawing.Point(121, 288);
+            this.editButton.Location = new System.Drawing.Point(121, 271);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(89, 29);
             this.editButton.TabIndex = 7;
@@ -113,7 +113,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 336);
+            this.ClientSize = new System.Drawing.Size(365, 321);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.deleteButton);

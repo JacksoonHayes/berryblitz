@@ -19,15 +19,25 @@ namespace DAT602_Project
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            if ((usernameTextBox.Text == "") || (passwordTextBox.Text == ""))
+            if ((usernameTextBox.Text == "") || (passwordTextBox.Text == "") ||  (emailTextBox.Text == ""))
             {
                 MessageBox.Show("Please fill in all fields", "Error");
+                return;
+            }
+            else if (passwordTextBox.Text != confirmTextBox.Text)
+            {
+                MessageBox.Show("Passwords do not match", "Error");
+                return;
+            }
+            else if (!emailTextBox.Text.Contains("@"))
+            {
+                MessageBox.Show("Invalid email address format", "Error");
                 return;
             }
             else
             {
                 var dbAccess = new DataAccess();
-                MessageBox.Show(dbAccess.RegisterUser(usernameTextBox.Text, passwordTextBox.Text));
+                MessageBox.Show(dbAccess.RegisterUser(usernameTextBox.Text, passwordTextBox.Text, emailTextBox.Text));
             }
         }
 

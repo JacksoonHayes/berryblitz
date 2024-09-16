@@ -37,13 +37,13 @@ namespace DAT602_Project
                         MessageBox.Show(result, "Success");
                         Player.CurrentPlayer = new Player
                         {
-                            username = usernameTextBox.Text,
-                            score = 1000
+                            username = usernameTextBox.Text
                         };
                     }
                     else
                     {
                         MessageBox.Show(result, "Login Failed");
+                        
                     }
                 }
                 catch (Exception ex)

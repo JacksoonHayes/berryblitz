@@ -37,8 +37,8 @@
             this.titleLabel = new System.Windows.Forms.Label();
             this.emailLabel = new System.Windows.Forms.Label();
             this.confirmLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.confirmTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // passwordLabel
@@ -130,21 +130,21 @@
             this.confirmLabel.TabIndex = 20;
             this.confirmLabel.Text = "Confirm Password:";
             // 
-            // textBox1
+            // emailTextBox
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(128, 315);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 22);
-            this.textBox1.TabIndex = 19;
+            this.emailTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.emailTextBox.Location = new System.Drawing.Point(128, 315);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(169, 22);
+            this.emailTextBox.TabIndex = 19;
             // 
-            // textBox2
+            // confirmTextBox
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(128, 254);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(169, 22);
-            this.textBox2.TabIndex = 18;
+            this.confirmTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.confirmTextBox.Location = new System.Drawing.Point(128, 254);
+            this.confirmTextBox.Name = "confirmTextBox";
+            this.confirmTextBox.Size = new System.Drawing.Size(169, 22);
+            this.confirmTextBox.TabIndex = 18;
             // 
             // RegisterForm
             // 
@@ -153,8 +153,8 @@
             this.ClientSize = new System.Drawing.Size(425, 514);
             this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.confirmLabel);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(this.confirmTextBox);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.registerButton);
@@ -181,7 +181,7 @@
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.Label confirmLabel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.TextBox confirmTextBox;
     }
 }

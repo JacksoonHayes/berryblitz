@@ -45,21 +45,24 @@ namespace DAT602_Project
             return (aDataSet.Tables[0].Rows[0])["Message"].ToString();
         }
 
-        public string RegisterUser(string pUserName, string pPassword)
+        public string RegisterUser(string pUserName, string pPassword, string pEmail)
         {
 
             List<MySqlParameter> p = new List<MySqlParameter>();
             var aP_username = new MySqlParameter("@UserName", MySqlDbType.VarChar, 50);
             var aP_password = new MySqlParameter("@Password", MySqlDbType.VarChar, 50);
+            var aP_email = new MySqlParameter("@Email", MySqlDbType.VarChar, 100);
 
             aP_username.Value = pUserName;
             aP_password.Value = pPassword;
+            aP_email.Value = pEmail;
             
             p.Add(aP_username);
             p.Add(aP_password);
+            p.Add(aP_email);
 
 
-            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call AddUserName(@UserName, @Password)", p.ToArray());
+            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call RegisterUser(@UserName, @Password, @Email)", p.ToArray());
             // expecting one table with one row
             return (aDataSet.Tables[0].Rows[0])["MESSAGE"].ToString();
         }
@@ -106,11 +109,12 @@ namespace DAT602_Project
             return (aDataSet.Tables[0].Rows[0])["Message"].ToString();
         }
 
-        /*public string DeletePlayer(int playerId)
+        public string DeletePlayer(int pPlayerId)
         {
             List<MySqlParameter> p = new List<MySqlParameter>();
             var aP_playerId = new MySqlParameter("@PlayerId", MySqlDbType.Int32);
-            aP_playerId.Value = playerId;
+            aP_playerId.Value = pPlayerId;
+
             p.Add(aP_playerId);
 
             var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call DeletePlayer(@PlayerId)", p.ToArray());
@@ -118,7 +122,7 @@ namespace DAT602_Project
             return (aDataSet.Tables[0].Rows[0])["Message"].ToString();
         }
 
-        public string DeleteGame(int gameId)
+        /*public string DeleteGame(int gameId)
         {
             List<MySqlParameter> p = new List<MySqlParameter>();
             var aP_gameId = new MySqlParameter("@GameId", MySqlDbType.Int32);
