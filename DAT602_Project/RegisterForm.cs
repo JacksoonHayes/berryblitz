@@ -27,7 +27,7 @@ namespace DAT602_Project
             else
             {
                 var dbAccess = new DataAccess();
-                MessageBox.Show(dbAccess.AddUserName(usernameTextBox.Text, passwordTextBox.Text));
+                MessageBox.Show(dbAccess.RegisterUser(usernameTextBox.Text, passwordTextBox.Text));
             }
         }
 

@@ -45,7 +45,7 @@ namespace DAT602_Project
             return (aDataSet.Tables[0].Rows[0])["Message"].ToString();
         }
 
-        public string AddUserName(string pUserName, string pPassword)
+        public string RegisterUser(string pUserName, string pPassword)
         {
 
             List<MySqlParameter> p = new List<MySqlParameter>();
