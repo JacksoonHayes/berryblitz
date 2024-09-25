@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DAT602_Project
 {
-    public partial class ProfileForm : Form
+    public partial class AddUserForm : Form
     {
-        public ProfileForm()
+        public AddUserForm()
         {
             InitializeComponent();
         }

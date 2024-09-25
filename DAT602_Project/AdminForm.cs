@@ -51,9 +51,8 @@ namespace DAT602_Project
         {
             try
             {
-                var selectedPlayerId = playersListBox.SelectedIndex - 1;
                 var dbAccess = new AdminDAO();
-                string result = dbAccess.DeletePlayer(selectedPlayerId);
+                string result = dbAccess.DeletePlayer();
 
                 if (result == "Player deleted successfully")
                 {
@@ -68,7 +67,7 @@ namespace DAT602_Project
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred while trying to log in: " + ex.Message, "Error");
+                MessageBox.Show("An error occurred while trying to delete a player: \n\n" + ex.Message, "Error");
             }
         }
     }
