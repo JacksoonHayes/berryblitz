@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,7 @@ namespace DAT602_Project
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            if ((usernameTextBox.Text == "") || (passwordTextBox.Text == "") ||  (emailTextBox.Text == ""))
+            if ((usernameTextBox.Text == "") || (passwordTextBox.Text == "") || (emailTextBox.Text == ""))
             {
                 MessageBox.Show("Please fill in all fields", "Error");
                 return;
@@ -36,8 +37,24 @@ namespace DAT602_Project
             }
             else
             {
-                var dbAccess = new DataAccess();
-                MessageBox.Show(dbAccess.RegisterUser(usernameTextBox.Text, passwordTextBox.Text, emailTextBox.Text));
+                try 
+                {
+                    var dbAccess = new LoginDAO();
+                    string result = dbAccess.RegisterUser(usernameTextBox.Text, passwordTextBox.Text, emailTextBox.Text);
+
+                    if (result == "Added new user")
+                    {
+                        MessageBox.Show(result, "Success");
+                    }
+                    else if(result == "Account with that name already exists!")
+                    {
+                        MessageBox.Show(result, "Error");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while trying to register: " + ex.Message, "Error");
+                }   
             }
         }
 

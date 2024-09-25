@@ -21,7 +21,7 @@ namespace DAT602_Project
         {
             try
             {
-                var dbAccess = new DataAccess();
+                var dbAccess = new AdminDAO();
                 List<Player> players = dbAccess.GetAllPlayers();
                 List<Game> games = dbAccess.GetAllGames();
 
@@ -31,12 +31,13 @@ namespace DAT602_Project
                 foreach (var player in players)
                 {
                     // Add each player's details to the list
-                    playersListBox.Items.Add($"{player.username} - Score: {player.score}");
+                    playersListBox.Items.Add($"{player.username}  -  Score: {player.score}");
                 }
                 foreach (var game in games)
                 {
                     // Add each game's details to the list
-                    gamesListBox.Items.Add($"Game ID:{game.game_id}");
+                    gamesListBox.Items.Add($"ID:{game.game_id}  -  {game.status}");
+
                 }
             }
             catch (Exception ex)

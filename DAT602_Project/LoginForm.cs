@@ -28,22 +28,23 @@ namespace DAT602_Project
             {
                 try
                 {
-                    var dbAccess = new DataAccess();
+                    var dbAccess = new LoginDAO();
                     string result = dbAccess.Login(usernameTextBox.Text, passwordTextBox.Text);
 
-                    if (result == "Login successful")
+                    if (result == "Login Successful")
                     {
+                        Player.CurrentPlayer = new Player();
                         new lobbyForm().Show();
+                      
                         MessageBox.Show(result, "Success");
-                        Player.CurrentPlayer = new Player
-                        {
-                            username = usernameTextBox.Text
-                        };
+                    }
+                    else if (result == "Locked Out") 
+                    {
+                        MessageBox.Show(result, "You have been locked out");
                     }
                     else
                     {
                         MessageBox.Show(result, "Login Failed");
-                        
                     }
                 }
                 catch (Exception ex)

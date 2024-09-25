@@ -26,7 +26,7 @@ namespace DAT602_Project
         {
             try
             {
-                var dbAccess = new DataAccess();
+                var dbAccess = new GameplayDAO();
                 MessageBox.Show(dbAccess.CreateGame());
                 new gameForm().Show();
             }
