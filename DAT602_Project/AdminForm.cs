@@ -47,9 +47,29 @@ namespace DAT602_Project
             }
         }
 
-        private void deleteButton_Click(object sender, EventArgs e)
+        private void deleteButton_Click_1(object sender, EventArgs e)
         {
+            try
+            {
+                var selectedPlayerId = playersListBox.SelectedIndex - 1;
+                var dbAccess = new AdminDAO();
+                string result = dbAccess.DeletePlayer(selectedPlayerId);
 
+                if (result == "Player deleted successfully")
+                {
+                    AdminForm_Load(sender, e);
+                    MessageBox.Show(result, "Success");
+                }
+                else if (result == "Player does not exist")
+                {
+                    MessageBox.Show(result, "Error");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while trying to log in: " + ex.Message, "Error");
+            }
         }
     }
 }
