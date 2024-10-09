@@ -22,8 +22,8 @@ namespace DAT602_Project
             try
             {
                 var dbAccess = new AdminDAO();
-                List<Player> players = dbAccess.GetAllPlayers();
-                List<Game> games = dbAccess.GetAllGames();
+                List<Player> players = dbAccess.getAllPlayers();
+                List<Game> games = dbAccess.getAllGames();
 
                 playersListBox.Items.Clear();
                 gamesListBox.Items.Clear();
@@ -49,26 +49,7 @@ namespace DAT602_Project
 
         private void deleteButton_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                var dbAccess = new AdminDAO();
-                string result = dbAccess.DeletePlayer();
-
-                if (result == "Player deleted successfully")
-                {
-                    AdminForm_Load(sender, e);
-                    MessageBox.Show(result, "Success");
-                }
-                else if (result == "Player does not exist")
-                {
-                    MessageBox.Show(result, "Error");
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred while trying to delete a player: \n\n" + ex.Message, "Error");
-            }
+            
         }
     }
 }

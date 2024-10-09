@@ -27,7 +27,7 @@ namespace DAT602_Project
             try
             {
                 var dbAccess = new GameplayDAO();
-                MessageBox.Show(dbAccess.CreateGame());
+                MessageBox.Show(dbAccess.createGame());
                 new gameForm().Show();
             }
             catch (Exception ex)

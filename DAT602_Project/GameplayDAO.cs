@@ -9,7 +9,7 @@ namespace DAT602_Project
 {
     internal class GameplayDAO : DataAccess
     {
-        public string CreateGame()
+        public string createGame()
         {
             List<MySqlParameter> p = new List<MySqlParameter>();
             var aP_startTime = new MySqlParameter("@StartTime", MySqlDbType.Time);
@@ -18,7 +18,7 @@ namespace DAT602_Project
 
             p.Add(aP_startTime);
 
-            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call CreateGame(@StartTime)", p.ToArray());
+            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call createGame(@StartTime)", p.ToArray());
 
             return (aDataSet.Tables[0].Rows[0])["Message"].ToString();
         }

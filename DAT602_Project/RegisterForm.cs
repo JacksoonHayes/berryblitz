@@ -40,7 +40,7 @@ namespace DAT602_Project
                 try 
                 {
                     var dbAccess = new LoginDAO();
-                    string result = dbAccess.RegisterUser(usernameTextBox.Text, passwordTextBox.Text, emailTextBox.Text);
+                    string result = dbAccess.registerUser(usernameTextBox.Text, passwordTextBox.Text, emailTextBox.Text);
 
                     if (result == "Added new user")
                     {

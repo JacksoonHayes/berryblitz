@@ -29,7 +29,7 @@ namespace DAT602_Project
                 try
                 {
                     var dbAccess = new LoginDAO();
-                    string result = dbAccess.Login(usernameTextBox.Text, passwordTextBox.Text);
+                    string result = dbAccess.loginUser(usernameTextBox.Text, passwordTextBox.Text);
 
                     if (result == "Login Successful")
                     {
