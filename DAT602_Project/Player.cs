@@ -15,5 +15,8 @@ namespace DAT602_Project
         public string email { get; set; }
         public int score { get; set; }  
         public int login_attempts { get; set; }
+        public bool locked_out { get; set; }
+        public bool is_banned { get; set; }
+
     }
 }

@@ -99,6 +99,7 @@
             this.addButton.TabIndex = 6;
             this.addButton.Text = "Add Player";
             this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // editButton
             // 
@@ -109,6 +110,7 @@
             this.editButton.TabIndex = 7;
             this.editButton.Text = "Edit Player";
             this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // adminForm
             // 

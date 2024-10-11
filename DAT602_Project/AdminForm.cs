@@ -30,9 +30,10 @@ namespace DAT602_Project
 
                 foreach (var player in players)
                 {
-                    // Add each player's details to the list
-                    playersListBox.Items.Add($"{player.username}  -  Score: {player.score}");
+                    playersListBox.Items.Add(player); // Add Player objects into the listbox
                 }
+                playersListBox.DisplayMember = "Username"; // Display only the username in the listbox
+
                 foreach (var game in games)
                 {
                     // Add each game's details to the list
@@ -51,5 +52,37 @@ namespace DAT602_Project
         {
             
         }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            new AddUserForm().Show();
+            AdminForm_Load(sender, e);
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            if (playersListBox.SelectedItem != null)
+            {
+                Player selectedPlayer = (Player)playersListBox.SelectedItem;
+
+                // Pass the selected player's data to the ProfileForm
+                ProfileForm profileForm = new ProfileForm(
+                    selectedPlayer.player_id,
+                    selectedPlayer.username,
+                    selectedPlayer.password,
+                    selectedPlayer.email,
+                    selectedPlayer.locked_out,
+                    selectedPlayer.is_banned
+                );
+
+                profileForm.ShowDialog(); // Open the ProfileForm as a modal dialog
+                AdminForm_Load(sender, e); // Refresh the listbox after the ProfileForm is closed
+            }
+            else
+            {
+                MessageBox.Show("Please select a player to edit.");
+            }
+        }
+
     }
 }

@@ -46,3 +46,5 @@ C:\Users\jacks\source\repos\JacksoonHayes\DAT602_Project\DAT602_Project\obj\Debu
 C:\Users\jacks\source\repos\JacksoonHayes\DAT602_Project\DAT602_Project\obj\Debug\DAT602_Project.LobbyForm.resources
 C:\Users\jacks\source\repos\JacksoonHayes\DAT602_Project\DAT602_Project\obj\Debug\DAT602_Project.AdminForm.resources
 C:\Users\jacks\source\repos\JacksoonHayes\DAT602_Project\DAT602_Project\obj\Debug\DAT602_Project.GameForm.resources
+C:\Users\jacks\source\repos\JacksoonHayes\DAT602_Project\DAT602_Project\obj\Debug\DAT602_Project.AddUserForm.resources
+C:\Users\jacks\source\repos\JacksoonHayes\DAT602_Project\DAT602_Project\obj\Debug\DAT602_Project.ProfileForm.resources
