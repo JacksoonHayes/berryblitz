@@ -105,5 +105,18 @@ namespace DAT602_Project
             return (aDataSet.Tables[0].Rows[0])["Message"].ToString();
         }
 
+        public string deleteGame(int pGameId)
+        {
+            List<MySqlParameter> p = new List<MySqlParameter>();
+            var aP_gameId = new MySqlParameter("@GameId", MySqlDbType.Int32);
+            aP_gameId.Value = pGameId;
+
+            p.Add(aP_gameId);
+
+            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call deleteGame(@GameId)", p.ToArray());
+
+            return (aDataSet.Tables[0].Rows[0])["Message"].ToString();
+        }
+
     }
 }

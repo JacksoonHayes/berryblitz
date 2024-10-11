@@ -46,6 +46,7 @@
             this.playersListBox.Name = "playersListBox";
             this.playersListBox.Size = new System.Drawing.Size(172, 212);
             this.playersListBox.TabIndex = 0;
+            this.playersListBox.SelectedIndexChanged += new System.EventHandler(this.playersListBox_SelectedIndexChanged);
             // 
             // gamesListBox
             // 
@@ -58,6 +59,7 @@
             this.gamesListBox.Name = "gamesListBox";
             this.gamesListBox.Size = new System.Drawing.Size(163, 212);
             this.gamesListBox.TabIndex = 1;
+            this.gamesListBox.SelectedIndexChanged += new System.EventHandler(this.gamesListBox_SelectedIndexChanged);
             // 
             // playersLabel
             // 
@@ -88,7 +90,7 @@
             this.deleteButton.TabIndex = 4;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
-            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click_1);
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // addButton
             // 
