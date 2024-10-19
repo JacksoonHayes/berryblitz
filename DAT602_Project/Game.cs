@@ -10,5 +10,8 @@ namespace DAT602_Project
     {
         public int game_id { get; set; }
         public string status { get; set; }
+        public DateTime start_time { get; set; }
+        public string current_turn { get; set; }
+        public int move_count { get; set; }
     }
 }

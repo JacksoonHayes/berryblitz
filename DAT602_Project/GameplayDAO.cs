@@ -9,19 +9,92 @@ namespace DAT602_Project
 {
     internal class GameplayDAO : DataAccess
     {
-        public string createGame()
+        // Preset values for rows and columns
+        private const int MaxRow = 10;
+        private const int MaxCol = 10;
+
+        public string makeBoard()
         {
             List<MySqlParameter> p = new List<MySqlParameter>();
-            var aP_startTime = new MySqlParameter("@StartTime", MySqlDbType.Time);
 
-            aP_startTime.Value = DateTime.Now.TimeOfDay;
+            var aP_maxRow = new MySqlParameter("@MaxRow", MySqlDbType.Int32);
+            var aP_maxCol = new MySqlParameter("@MaxCol", MySqlDbType.Int32);
 
-            p.Add(aP_startTime);
+            aP_maxRow.Value = MaxRow;
+            aP_maxCol.Value = MaxCol;
 
-            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call createGame(@StartTime)", p.ToArray());
+            p.Add(aP_maxRow);
+            p.Add(aP_maxCol);
 
-            return (aDataSet.Tables[0].Rows[0])["Message"].ToString();
+            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call makeBoard(@MaxRow, @MaxCol)", p.ToArray());
+
+            return aDataSet.Tables[0].Rows[0]["Message"].ToString();
         }
 
+        public string placeItemOnTile(int gameId, int row, int col, int itemId)
+        {
+            List<MySqlParameter> p = new List<MySqlParameter>();
+
+            var aP_gameId = new MySqlParameter("@GameId", MySqlDbType.Int32);
+            var aP_row = new MySqlParameter("@Row", MySqlDbType.Int32);
+            var aP_col = new MySqlParameter("@Col", MySqlDbType.Int32);
+            var aP_itemId = new MySqlParameter("@ItemId", MySqlDbType.Int32);
+
+            aP_gameId.Value = gameId;
+            aP_row.Value = row;
+            aP_col.Value = col;
+            aP_itemId.Value = itemId;
+
+            p.Add(aP_gameId);
+            p.Add(aP_row);
+            p.Add(aP_col);
+            p.Add(aP_itemId);
+
+            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call placeItemOnTile(@GameId, @Row, @Col, @ItemId)", p.ToArray());
+
+            return aDataSet.Tables[0].Rows[0]["Message"].ToString();
+        }
+
+        public string movePlayer(int playerId, int gameId, int newRow, int newCol)
+        {
+            List<MySqlParameter> p = new List<MySqlParameter>();
+
+            var aP_playerId = new MySqlParameter("@p_player_id", MySqlDbType.Int32);
+            var aP_gameId = new MySqlParameter("@p_game_id", MySqlDbType.Int32);
+            var aP_newRow = new MySqlParameter("@p_new_row", MySqlDbType.Int32);
+            var aP_newCol = new MySqlParameter("@p_new_col", MySqlDbType.Int32);
+
+            aP_playerId.Value = playerId;
+            aP_gameId.Value = gameId;
+            aP_newRow.Value = newRow;
+            aP_newCol.Value = newCol;
+
+            p.Add(aP_playerId);
+            p.Add(aP_gameId);
+            p.Add(aP_newRow);
+            p.Add(aP_newCol);
+
+            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call movePlayer(@p_player_id, @p_game_id, @p_new_row, @p_new_col)", p.ToArray());
+
+            return aDataSet.Tables[0].Rows[0]["message"].ToString();
+        }
+
+        public string updatePlayerScore(int playerId, int tileId)
+        {
+            List<MySqlParameter> p = new List<MySqlParameter>();
+
+            var aP_playerId = new MySqlParameter("@p_player_id", MySqlDbType.Int32);
+            var aP_tileId = new MySqlParameter("@p_tile_id", MySqlDbType.Int32);
+
+            aP_playerId.Value = playerId;
+            aP_tileId.Value = tileId;
+
+            p.Add(aP_playerId);
+            p.Add(aP_tileId);
+
+            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call updatePlayerScore(@p_player_id, @p_tile_id)", p.ToArray());
+
+            return aDataSet.Tables[0].Rows[0]["message"].ToString();
+        }
     }
 }
