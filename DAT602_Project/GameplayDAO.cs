@@ -96,5 +96,23 @@ namespace DAT602_Project
 
             return aDataSet.Tables[0].Rows[0]["message"].ToString();
         }
+
+        public string acquireItem(int playerId, int tileId)
+        {
+            List<MySqlParameter> p = new List<MySqlParameter>();
+
+            var aP_playerId = new MySqlParameter("@p_player_id", MySqlDbType.Int32);
+            var aP_tileId = new MySqlParameter("@p_tile_id", MySqlDbType.Int32);
+
+            aP_playerId.Value = playerId;
+            aP_tileId.Value = tileId;
+
+            p.Add(aP_playerId);
+            p.Add(aP_tileId);
+
+            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call acquireItem(@p_player_id, @p_tile_id)", p.ToArray());
+
+            return aDataSet.Tables[0].Rows[0]["message"].ToString();
+        }
     }
 }

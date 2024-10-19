@@ -42,6 +42,7 @@
             // playersListBox
             // 
             this.playersListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.playersListBox.Enabled = false;
             this.playersListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playersListBox.FormattingEnabled = true;
             this.playersListBox.ItemHeight = 20;
@@ -66,7 +67,6 @@
             this.gamesListBox.Name = "gamesListBox";
             this.gamesListBox.Size = new System.Drawing.Size(158, 144);
             this.gamesListBox.TabIndex = 1;
-            this.gamesListBox.SelectedIndexChanged += new System.EventHandler(this.gamesListBox_SelectedIndexChanged);
             // 
             // newGameButton
             // 
@@ -158,6 +158,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "lobbyForm";
             this.Text = "Lobby";
+            this.Load += new System.EventHandler(this.lobbyForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

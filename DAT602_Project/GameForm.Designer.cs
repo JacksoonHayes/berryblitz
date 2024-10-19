@@ -37,6 +37,10 @@
             this.timeLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.placeItemButton = new System.Windows.Forms.Button();
+            this.movePlayerButton = new System.Windows.Forms.Button();
+            this.acquireItemButton = new System.Windows.Forms.Button();
+            this.updateScoreButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gameGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,11 +142,59 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Jim\'s Score: 100";
             // 
+            // placeItemButton
+            // 
+            this.placeItemButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.placeItemButton.Location = new System.Drawing.Point(135, 163);
+            this.placeItemButton.Name = "placeItemButton";
+            this.placeItemButton.Size = new System.Drawing.Size(100, 27);
+            this.placeItemButton.TabIndex = 9;
+            this.placeItemButton.Text = "Place Item";
+            this.placeItemButton.UseVisualStyleBackColor = true;
+            this.placeItemButton.Click += new System.EventHandler(this.placeItemButton_Click);
+            // 
+            // movePlayerButton
+            // 
+            this.movePlayerButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.movePlayerButton.Location = new System.Drawing.Point(279, 163);
+            this.movePlayerButton.Name = "movePlayerButton";
+            this.movePlayerButton.Size = new System.Drawing.Size(100, 27);
+            this.movePlayerButton.TabIndex = 10;
+            this.movePlayerButton.Text = "Move Player";
+            this.movePlayerButton.UseVisualStyleBackColor = true;
+            this.movePlayerButton.Click += new System.EventHandler(this.movePlayerButton_Click);
+            // 
+            // acquireItemButton
+            // 
+            this.acquireItemButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.acquireItemButton.Location = new System.Drawing.Point(135, 220);
+            this.acquireItemButton.Name = "acquireItemButton";
+            this.acquireItemButton.Size = new System.Drawing.Size(100, 27);
+            this.acquireItemButton.TabIndex = 11;
+            this.acquireItemButton.Text = "Acquire Item";
+            this.acquireItemButton.UseVisualStyleBackColor = true;
+            this.acquireItemButton.Click += new System.EventHandler(this.acquireItemButton_Click);
+            // 
+            // updateScoreButton
+            // 
+            this.updateScoreButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.updateScoreButton.Location = new System.Drawing.Point(279, 222);
+            this.updateScoreButton.Name = "updateScoreButton";
+            this.updateScoreButton.Size = new System.Drawing.Size(100, 27);
+            this.updateScoreButton.TabIndex = 12;
+            this.updateScoreButton.Text = "Update Score";
+            this.updateScoreButton.UseVisualStyleBackColor = true;
+            this.updateScoreButton.Click += new System.EventHandler(this.updateScoreButton_Click);
+            // 
             // gameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(719, 450);
+            this.Controls.Add(this.updateScoreButton);
+            this.Controls.Add(this.acquireItemButton);
+            this.Controls.Add(this.movePlayerButton);
+            this.Controls.Add(this.placeItemButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.timeLabel);
@@ -172,5 +224,9 @@
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button placeItemButton;
+        private System.Windows.Forms.Button movePlayerButton;
+        private System.Windows.Forms.Button acquireItemButton;
+        private System.Windows.Forms.Button updateScoreButton;
     }
 }

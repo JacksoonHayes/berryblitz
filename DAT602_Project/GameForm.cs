@@ -21,5 +21,25 @@ namespace DAT602_Project
         {
 
         }
+
+        private void placeItemButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void movePlayerButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void acquireItemButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateScoreButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
