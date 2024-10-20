@@ -31,7 +31,7 @@ namespace DAT602_Project
             return aDataSet.Tables[0].Rows[0]["Message"].ToString();
         }
 
-        public string placeItemOnTile(int gameId, int row, int col, int itemId)
+        public string placeItemOnTile(int gameId, int itemId, int row, int col)
         {
             List<MySqlParameter> p = new List<MySqlParameter>();
 

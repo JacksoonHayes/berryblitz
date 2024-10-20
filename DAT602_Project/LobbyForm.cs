@@ -58,6 +58,7 @@ namespace DAT602_Project
                 if (result == "Created a new game board")
                 {
                     MessageBox.Show(result, "Success");
+                    new gameForm().Show();
                 }
                 else
                 {

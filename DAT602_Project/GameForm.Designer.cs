@@ -108,6 +108,7 @@
             this.leaveButton.TabIndex = 5;
             this.leaveButton.Text = "Leave Game";
             this.leaveButton.UseVisualStyleBackColor = true;
+            this.leaveButton.Click += new System.EventHandler(this.leaveButton_Click);
             // 
             // timeLabel
             // 
@@ -178,9 +179,9 @@
             // updateScoreButton
             // 
             this.updateScoreButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.updateScoreButton.Location = new System.Drawing.Point(279, 222);
+            this.updateScoreButton.Location = new System.Drawing.Point(279, 220);
             this.updateScoreButton.Name = "updateScoreButton";
-            this.updateScoreButton.Size = new System.Drawing.Size(100, 27);
+            this.updateScoreButton.Size = new System.Drawing.Size(143, 27);
             this.updateScoreButton.TabIndex = 12;
             this.updateScoreButton.Text = "Update Score";
             this.updateScoreButton.UseVisualStyleBackColor = true;

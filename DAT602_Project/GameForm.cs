@@ -24,22 +24,108 @@ namespace DAT602_Project
 
         private void placeItemButton_Click(object sender, EventArgs e)
         {
+            int gameId = 5;
+            int itemId = 2;
+            int row = 1;
+            int col = 1;
+
+            try
+            {
+                var dbAccess = new GameplayDAO();
+                string result = dbAccess.placeItemOnTile(gameId, itemId, row, col);
+                if (result == "Item placed successfully")
+                {
+                    MessageBox.Show(result, "Success");
+                }
+                else
+                {
+                    MessageBox.Show(result, "Error");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while placing the item: " + ex.Message, "Error");
+            }
 
         }
 
         private void movePlayerButton_Click(object sender, EventArgs e)
         {
+            int playerId = 1;
+            int gameId = 5;
+            int newRow = 1;
+            int newCol = 1;
 
+            try {
+                
+                var dbAccess = new GameplayDAO();
+                string result = dbAccess.movePlayer(playerId, gameId, newRow, newCol);
+                if (result == $"Player moved successfully to tile: ({newRow}, {newCol})")
+                {
+                    MessageBox.Show(result, "Success");
+                }
+                else
+                {
+                    MessageBox.Show(result, "Error");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while moving the player: " + ex.Message, "Error");
+            }
         }
 
         private void acquireItemButton_Click(object sender, EventArgs e)
         {
+            int playerID = 1;
+            int tileID = 30;
 
+            try
+            {
+                var dbAccess = new GameplayDAO();
+                string result = dbAccess.acquireItem(playerID, tileID);
+                if (result == "Added to inventory")
+                {
+                    MessageBox.Show(result, "Success");
+                }
+                else
+                {
+                    MessageBox.Show(result, "Error");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while acquiring the item: " + ex.Message, "Error");
+            }
         }
 
         private void updateScoreButton_Click(object sender, EventArgs e)
         {
+            int playerID = 1;
+            int tileID = 30;
 
+            try
+            {
+                var dbAccess = new GameplayDAO();
+                string result = dbAccess.updatePlayerScore(playerID, tileID);
+                if (result == "Player score updated by: ', v_points")
+                {
+                    MessageBox.Show(result, "Success");
+                }
+                else
+                {
+                    MessageBox.Show(result, "Error");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while acquiring the item: " + ex.Message, "Error");
+            }
+        }
+
+        private void leaveButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
