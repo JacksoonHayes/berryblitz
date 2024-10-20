@@ -127,5 +127,28 @@ namespace DAT602_Project
         {
             Close();
         }
+
+        private void moveThornsButton_Click(object sender, EventArgs e)
+        {
+            int gameId = 5;
+
+            try
+            {
+                var dbAccess = new GameplayDAO();
+                string result = dbAccess.moveThorns(gameId);
+                if (result == "Thorns (NPC) moved successfully")
+                {
+                    MessageBox.Show(result, "Success");
+                }
+                else
+                {
+                    MessageBox.Show(result, "Error");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while moving the thorns: " + ex.Message, "Error");
+            }
+        }
     }
 }

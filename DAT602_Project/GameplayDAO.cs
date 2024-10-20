@@ -17,8 +17,8 @@ namespace DAT602_Project
         {
             List<MySqlParameter> p = new List<MySqlParameter>();
 
-            var aP_maxRow = new MySqlParameter("@MaxRow", MySqlDbType.Int32);
-            var aP_maxCol = new MySqlParameter("@MaxCol", MySqlDbType.Int32);
+            var aP_maxRow = new MySqlParameter("@p_max_row", MySqlDbType.Int32);
+            var aP_maxCol = new MySqlParameter("@p_max_col", MySqlDbType.Int32);
 
             aP_maxRow.Value = MaxRow;
             aP_maxCol.Value = MaxCol;
@@ -26,7 +26,7 @@ namespace DAT602_Project
             p.Add(aP_maxRow);
             p.Add(aP_maxCol);
 
-            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call makeBoard(@MaxRow, @MaxCol)", p.ToArray());
+            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call makeBoard(@p_max_row, @p_max_col)", p.ToArray());
 
             return aDataSet.Tables[0].Rows[0]["Message"].ToString();
         }
@@ -35,10 +35,10 @@ namespace DAT602_Project
         {
             List<MySqlParameter> p = new List<MySqlParameter>();
 
-            var aP_gameId = new MySqlParameter("@GameId", MySqlDbType.Int32);
-            var aP_row = new MySqlParameter("@Row", MySqlDbType.Int32);
-            var aP_col = new MySqlParameter("@Col", MySqlDbType.Int32);
-            var aP_itemId = new MySqlParameter("@ItemId", MySqlDbType.Int32);
+            var aP_gameId = new MySqlParameter("@p_game_id", MySqlDbType.Int32);
+            var aP_row = new MySqlParameter("@p_row", MySqlDbType.Int32);
+            var aP_col = new MySqlParameter("@p_col", MySqlDbType.Int32);
+            var aP_itemId = new MySqlParameter("@p_item_id", MySqlDbType.Int32);
 
             aP_gameId.Value = gameId;
             aP_row.Value = row;
@@ -50,7 +50,7 @@ namespace DAT602_Project
             p.Add(aP_col);
             p.Add(aP_itemId);
 
-            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call placeItemOnTile(@GameId, @Row, @Col, @ItemId)", p.ToArray());
+            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call placeItemOnTile(@p_game_id, @p_row, @p_col, @p_item_id)", p.ToArray());
 
             return aDataSet.Tables[0].Rows[0]["Message"].ToString();
         }
@@ -111,6 +111,21 @@ namespace DAT602_Project
             p.Add(aP_tileId);
 
             var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call acquireItem(@p_player_id, @p_tile_id)", p.ToArray());
+
+            return aDataSet.Tables[0].Rows[0]["message"].ToString();
+        }
+
+        public string moveThorns(int gmaeId)
+        {
+            List<MySqlParameter> p = new List<MySqlParameter>();
+
+            var aP_gameId = new MySqlParameter("@p_game_id", MySqlDbType.Int32);
+
+            aP_gameId.Value = gmaeId;
+
+            p.Add(aP_gameId);
+
+            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call moveThorns(@p_game_id)", p.ToArray());
 
             return aDataSet.Tables[0].Rows[0]["message"].ToString();
         }

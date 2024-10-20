@@ -41,6 +41,7 @@
             this.movePlayerButton = new System.Windows.Forms.Button();
             this.acquireItemButton = new System.Windows.Forms.Button();
             this.updateScoreButton = new System.Windows.Forms.Button();
+            this.moveThornsButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gameGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,7 +147,7 @@
             // placeItemButton
             // 
             this.placeItemButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.placeItemButton.Location = new System.Drawing.Point(135, 163);
+            this.placeItemButton.Location = new System.Drawing.Point(56, 102);
             this.placeItemButton.Name = "placeItemButton";
             this.placeItemButton.Size = new System.Drawing.Size(100, 27);
             this.placeItemButton.TabIndex = 9;
@@ -157,7 +158,7 @@
             // movePlayerButton
             // 
             this.movePlayerButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.movePlayerButton.Location = new System.Drawing.Point(279, 163);
+            this.movePlayerButton.Location = new System.Drawing.Point(199, 102);
             this.movePlayerButton.Name = "movePlayerButton";
             this.movePlayerButton.Size = new System.Drawing.Size(100, 27);
             this.movePlayerButton.TabIndex = 10;
@@ -168,7 +169,7 @@
             // acquireItemButton
             // 
             this.acquireItemButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.acquireItemButton.Location = new System.Drawing.Point(135, 220);
+            this.acquireItemButton.Location = new System.Drawing.Point(56, 171);
             this.acquireItemButton.Name = "acquireItemButton";
             this.acquireItemButton.Size = new System.Drawing.Size(100, 27);
             this.acquireItemButton.TabIndex = 11;
@@ -179,7 +180,7 @@
             // updateScoreButton
             // 
             this.updateScoreButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.updateScoreButton.Location = new System.Drawing.Point(279, 220);
+            this.updateScoreButton.Location = new System.Drawing.Point(199, 171);
             this.updateScoreButton.Name = "updateScoreButton";
             this.updateScoreButton.Size = new System.Drawing.Size(143, 27);
             this.updateScoreButton.TabIndex = 12;
@@ -187,11 +188,23 @@
             this.updateScoreButton.UseVisualStyleBackColor = true;
             this.updateScoreButton.Click += new System.EventHandler(this.updateScoreButton_Click);
             // 
+            // moveThornsButton
+            // 
+            this.moveThornsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.moveThornsButton.Location = new System.Drawing.Point(56, 242);
+            this.moveThornsButton.Name = "moveThornsButton";
+            this.moveThornsButton.Size = new System.Drawing.Size(143, 27);
+            this.moveThornsButton.TabIndex = 13;
+            this.moveThornsButton.Text = "Move Thorns (NPC)";
+            this.moveThornsButton.UseVisualStyleBackColor = true;
+            this.moveThornsButton.Click += new System.EventHandler(this.moveThornsButton_Click);
+            // 
             // gameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(719, 450);
+            this.Controls.Add(this.moveThornsButton);
             this.Controls.Add(this.updateScoreButton);
             this.Controls.Add(this.acquireItemButton);
             this.Controls.Add(this.movePlayerButton);
@@ -229,5 +242,6 @@
         private System.Windows.Forms.Button movePlayerButton;
         private System.Windows.Forms.Button acquireItemButton;
         private System.Windows.Forms.Button updateScoreButton;
+        private System.Windows.Forms.Button moveThornsButton;
     }
 }
