@@ -21,7 +21,7 @@ namespace DAT602_Project
             p.Add(aP_username);
             p.Add(aP_password);
 
-            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call Login(@UserName, @Password)", p.ToArray());
+            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call loginUser(@UserName, @Password)", p.ToArray());
             return (aDataSet.Tables[0].Rows[0])["Message"].ToString();
         }
 
@@ -42,7 +42,7 @@ namespace DAT602_Project
             p.Add(aP_email);
 
 
-            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call RegisterUser(@UserName, @Password, @Email)", p.ToArray());
+            var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call registerUser(@UserName, @Password, @Email)", p.ToArray());
             // expecting one table with one row
             return (aDataSet.Tables[0].Rows[0])["MESSAGE"].ToString();
         }

@@ -33,7 +33,7 @@ namespace DAT602_Project
             {
                 var dbAccess = new GameplayDAO();
                 string result = dbAccess.placeItemOnTile(gameId, itemId, row, col);
-                if (result == "Item placed successfully")
+                if (result == $"Item placed successfully on tile: {row}, {col}")
                 {
                     MessageBox.Show(result, "Success");
                 }
@@ -53,14 +53,14 @@ namespace DAT602_Project
         {
             int playerId = 1;
             int gameId = 5;
-            int newRow = 1;
+            int newRow = 0;
             int newCol = 1;
 
             try {
                 
                 var dbAccess = new GameplayDAO();
                 string result = dbAccess.movePlayer(playerId, gameId, newRow, newCol);
-                if (result == $"Player moved successfully to tile: ({newRow}, {newCol})")
+                if (result == $"Player moved successfully to tile: {newRow}, {newCol}")
                 {
                     MessageBox.Show(result, "Success");
                 }
@@ -78,13 +78,13 @@ namespace DAT602_Project
         private void acquireItemButton_Click(object sender, EventArgs e)
         {
             int playerID = 1;
-            int tileID = 30;
+            int tileID = 16;
 
             try
             {
                 var dbAccess = new GameplayDAO();
                 string result = dbAccess.acquireItem(playerID, tileID);
-                if (result == "Added to inventory")
+                if (result == "Item added to inventory")
                 {
                     MessageBox.Show(result, "Success");
                 }
@@ -108,14 +108,7 @@ namespace DAT602_Project
             {
                 var dbAccess = new GameplayDAO();
                 string result = dbAccess.updatePlayerScore(playerID, tileID);
-                if (result == "Player score updated by: ', v_points")
-                {
-                    MessageBox.Show(result, "Success");
-                }
-                else
-                {
-                    MessageBox.Show(result, "Error");
-                }
+                MessageBox.Show(result, "Success");
             }
             catch (Exception ex)
             {
