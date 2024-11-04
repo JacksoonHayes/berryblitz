@@ -73,8 +73,15 @@ namespace DAT602_Project
 
         private void adminButton_Click(object sender, EventArgs e)
         {
-            new adminForm().Show();
-            lobbyForm_Load(sender, e);
+            try {
+                new adminForm().Show();
+                lobbyForm_Load(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while trying to access the admin panel: " + ex.Message, "Error");
+            }
+
         }
 
         private void logoutButton_Click(object sender, EventArgs e)

@@ -50,8 +50,15 @@ namespace DAT602_Project
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            new AddUserForm().Show();
-            AdminForm_Load(sender, e);
+            try
+            {
+                new AddUserForm().Show();
+                AdminForm_Load(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while trying to add a game: " + ex.Message, "Error");
+            }
         }
 
         private void editButton_Click(object sender, EventArgs e)
@@ -69,9 +76,14 @@ namespace DAT602_Project
                     selectedPlayer.locked_out,
                     selectedPlayer.is_banned
                 );
-
-                profileForm.ShowDialog(); // Open the ProfileForm as a modal dialog
-                AdminForm_Load(sender, e); // Refresh the listbox after the ProfileForm is closed
+                try {
+                    profileForm.ShowDialog(); // Open the ProfileForm as a modal dialog
+                    AdminForm_Load(sender, e); // Refresh the listbox after the ProfileForm is closed}
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while trying to edit the player: " + ex.Message, "Error");
+                }
             }
             else
             {
