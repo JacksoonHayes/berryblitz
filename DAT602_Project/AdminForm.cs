@@ -77,8 +77,8 @@ namespace DAT602_Project
                     selectedPlayer.is_banned
                 );
                 try {
-                    profileForm.ShowDialog(); // Open the ProfileForm as a modal dialog
-                    AdminForm_Load(sender, e); // Refresh the listbox after the ProfileForm is closed}
+                    profileForm.ShowDialog();
+                    AdminForm_Load(sender, e);
                 }
                 catch (Exception ex)
                 {
@@ -104,7 +104,14 @@ namespace DAT602_Project
                     {
                         var dbAccess = new AdminDAO();
                         string result = dbAccess.deletePlayer(selectedPlayer.player_id);
-                        MessageBox.Show(result, "Player deleted successfully");
+                        if (result == "Transaction committed")
+                        {
+                            MessageBox.Show("User deleted successfully.", "Success");
+                        }
+                        else if (result == "Transaction rolled back")
+                        {
+                            MessageBox.Show("Failed to delete user: " + result, "Error");
+                        }
                         AdminForm_Load(sender, e);
                     }
                     catch (Exception ex)
@@ -123,7 +130,14 @@ namespace DAT602_Project
                     {
                         var dbAccess = new AdminDAO();
                         string result = dbAccess.deleteGame(selectedGame.game_id);
-                        MessageBox.Show(result, "Game deleted successfully");
+                        if (result == "Transaction committed")
+                        {
+                            MessageBox.Show("Game deleted successfully.", "Success");
+                        }
+                        else if (result == "Transaction rolled back")
+                        {
+                            MessageBox.Show("Failed to delete game: " + result, "Error");
+                        }
                         AdminForm_Load(sender, e);
                     }
                     catch (Exception ex)

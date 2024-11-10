@@ -33,13 +33,13 @@ namespace DAT602_Project
             {
                 var dbAccess = new GameplayDAO();
                 string result = dbAccess.placeItemOnTile(gameId, itemId, row, col);
-                if (result == $"Item placed successfully on tile: {row}, {col}")
+                if (result == "Transaction committed")
                 {
-                    MessageBox.Show(result, "Success");
+                    MessageBox.Show($"Item placed successfully on tile: {row}, {col}", "Success");
                 }
-                else
+                else if (result == "Transaction rolled back")
                 {
-                    MessageBox.Show(result, "Error");
+                    MessageBox.Show("Failed to place item: " + result, "Error");
                 }
             }
             catch (Exception ex)
@@ -60,13 +60,13 @@ namespace DAT602_Project
                 
                 var dbAccess = new GameplayDAO();
                 string result = dbAccess.movePlayer(playerId, gameId, newRow, newCol);
-                if (result == $"Player moved successfully to tile: {newRow}, {newCol}")
+                if (result == "Transaction committed")
                 {
-                    MessageBox.Show(result, "Success");
+                    MessageBox.Show($"Player moved successfully to tile: {newRow}, {newCol}", "Success");
                 }
-                else
+                else if (result == "Transaction rolled back")
                 {
-                    MessageBox.Show(result, "Error");
+                    MessageBox.Show("Failed to move player: " + result, "Error");
                 }
             }
             catch (Exception ex)
@@ -84,13 +84,13 @@ namespace DAT602_Project
             {
                 var dbAccess = new GameplayDAO();
                 string result = dbAccess.acquireItem(playerID, tileID);
-                if (result == "Item added to inventory")
+                if (result == "Transaction committed")
                 {
-                    MessageBox.Show(result, "Success");
+                    MessageBox.Show("Item added to inventory", "Success");
                 }
-                else
+                else if (result == "Transaction rolled back")
                 {
-                    MessageBox.Show(result, "Error");
+                    MessageBox.Show("Failed to acquire item: " + result, "Error");
                 }
             }
             catch (Exception ex)
@@ -108,7 +108,14 @@ namespace DAT602_Project
             {
                 var dbAccess = new GameplayDAO();
                 string result = dbAccess.updatePlayerScore(playerID, tileID);
-                MessageBox.Show(result, "Success");
+                if (result == "Transaction committed")
+                {
+                    MessageBox.Show("Player score updated successfully", "Success");
+                }
+                else if (result == "Transaction rolled back")
+                {
+                    MessageBox.Show("Failed to update score: " + result, "Error");
+                }
             }
             catch (Exception ex)
             {
@@ -129,13 +136,13 @@ namespace DAT602_Project
             {
                 var dbAccess = new GameplayDAO();
                 string result = dbAccess.moveThorns(gameId);
-                if (result == "Thorns (NPC) moved successfully")
+                if (result == "Transaction committed")
                 {
-                    MessageBox.Show(result, "Success");
+                    MessageBox.Show("Thorns (NPC) moved successfully", "Success");
                 }
-                else
+                else if (result == "Transaction rolled back")
                 {
-                    MessageBox.Show(result, "Error");
+                    MessageBox.Show("Failed to move the thorns: " + result, "Error");
                 }
             }
             catch (Exception ex)

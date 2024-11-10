@@ -117,6 +117,10 @@ namespace DAT602_Project
 
                 return aDataSet.Tables[0].Rows[0]["message"].ToString();
             }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
 
         }
 

@@ -55,14 +55,15 @@ namespace DAT602_Project
                 var dbAccess = new GameplayDAO();
                 string result = dbAccess.makeBoard();
                 lobbyForm_Load(sender, e);
-                if (result == "Created a new game board")
+
+                if (result == "Transaction committed")
                 {
-                    MessageBox.Show(result, "Success");
+                    MessageBox.Show("New game create successfully.", "Success");
                     new gameForm().Show();
                 }
-                else
+                else if (result == "Transaction rolled back")
                 {
-                    MessageBox.Show(result, "Error");
+                    MessageBox.Show("Failed to create a new game: " + result, "Error");
                 }
             }
             catch (Exception ex)

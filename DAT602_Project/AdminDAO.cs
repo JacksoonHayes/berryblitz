@@ -75,13 +75,14 @@ namespace DAT602_Project
 
                 var aDataSet = MySqlHelper.ExecuteDataset(DataAccess.mySqlConnection, "call addUser(@Username, @Password, @Email)", p.ToArray());
 
-                return (aDataSet.Tables[0].Rows[0])["Message"].ToString();
+                return aDataSet.Tables[0].Rows[0]["Message"].ToString();
             }
             catch (Exception ex)
             {
                 return ex.Message;
             }
         }
+
         public string updatePlayerProfile(int pPlayerId, string pUsername, string pPassword, string pEmail, bool pLockedOut, bool pBanned)
         {
             try

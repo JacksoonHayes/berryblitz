@@ -36,18 +36,26 @@ namespace DAT602_Project
                     var dbAccess = new AdminDAO();
                     string result = dbAccess.addUser(usernameTextBox.Text, passwordTextBox.Text, emailTextBox.Text);
 
-                    if (result == "Added new user")
+                    if (result == "Transaction committed")
                     {
-                        MessageBox.Show(result, "Success");
+                        MessageBox.Show("User added successfully.", "Success");
+                    }
+                    else if (result == "Transaction rolled back")
+                    {
+                        MessageBox.Show("Failed to add user: " + result, "Error");
                     }
                     else if (result == "Account with that name already exists!")
                     {
                         MessageBox.Show(result, "Error");
                     }
+                    else
+                    {
+                        MessageBox.Show("Unexpected response: " + result, "Info");
+                    }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("An error occurred while trying to register: " + ex.Message, "Error");
+                    MessageBox.Show("An error occurred while trying to add a user: " + ex.Message, "Error");
                 }
             }
         }

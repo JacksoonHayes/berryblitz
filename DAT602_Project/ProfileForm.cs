@@ -38,7 +38,15 @@ namespace DAT602_Project
             {
                 AdminDAO adminDAO = new AdminDAO();
                 string result = adminDAO.updatePlayerProfile(playerId, username, password, email, locked_out, is_banned);
-                MessageBox.Show(result, "Profile updated succesfully");
+                if (result == "Transaction committed")
+                {
+                    MessageBox.Show("Profile updated successfully", "Success");
+                }
+                else if (result == "Transaction rolled back")
+                {
+                    MessageBox.Show("Failed to update user profile: " + result, "Error");
+                }
+
             }
             catch (Exception ex)
             {
