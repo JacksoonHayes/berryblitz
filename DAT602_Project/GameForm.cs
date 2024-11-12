@@ -41,6 +41,10 @@ namespace DAT602_Project
                 {
                     MessageBox.Show("Failed to place item: " + result, "Error");
                 }
+                else
+                {
+                    MessageBox.Show("Unexpected response: " + result, "Info");
+                }
             }
             catch (Exception ex)
             {
@@ -51,10 +55,10 @@ namespace DAT602_Project
 
         private void movePlayerButton_Click(object sender, EventArgs e)
         {
-            int playerId = 1;
-            int gameId = 5;
-            int newRow = 0;
-            int newCol = 1;
+            int playerId = 5;
+            int gameId = 1;
+            int newRow = 8;
+            int newCol = 9;
 
             try {
                 
@@ -67,6 +71,10 @@ namespace DAT602_Project
                 else if (result == "Transaction rolled back. Move Player Error")
                 {
                     MessageBox.Show("Failed to move player: " + result, "Error");
+                }
+                else
+                {
+                    MessageBox.Show("Unexpected response: " + result, "Info");
                 }
             }
             catch (Exception ex)
@@ -92,6 +100,10 @@ namespace DAT602_Project
                 {
                     MessageBox.Show("Failed to acquire item: " + result, "Error");
                 }
+                else
+                {
+                    MessageBox.Show("Unexpected response: " + result, "Info");
+                }
             }
             catch (Exception ex)
             {
@@ -115,6 +127,10 @@ namespace DAT602_Project
                 else if (result == "Transaction rolled back. Score Update Error")
                 {
                     MessageBox.Show("Failed to update score: " + result, "Error");
+                }
+                else
+                {
+                    MessageBox.Show("Unexpected response: " + result, "Info");
                 }
             }
             catch (Exception ex)
@@ -143,6 +159,10 @@ namespace DAT602_Project
                 else if (result == "Transaction rolled back. Thorns Moving Error")
                 {
                     MessageBox.Show("Failed to move the thorns: " + result, "Error");
+                }
+                else
+                {
+                    MessageBox.Show("Unexpected response: " + result, "Info");
                 }
             }
             catch (Exception ex)
