@@ -56,12 +56,12 @@ namespace DAT602_Project
                 string result = dbAccess.makeBoard();
                 lobbyForm_Load(sender, e);
 
-                if (result == "Transaction committed")
+                if (result == "Transaction Committed. Board created successfully")
                 {
                     MessageBox.Show("New game create successfully.", "Success");
                     new gameForm().Show();
                 }
-                else if (result == "Transaction rolled back")
+                else if (result == "Transaction rolled back. Board Creation Error")
                 {
                     MessageBox.Show("Failed to create a new game: " + result, "Error");
                 }

@@ -16,7 +16,7 @@ namespace DAT602_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new gameForm());
+            Application.Run(new landingForm());
         }
     }
 }

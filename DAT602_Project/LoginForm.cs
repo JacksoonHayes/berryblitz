@@ -30,13 +30,13 @@ namespace DAT602_Project
                 {
                     var dbAccess = new LoginDAO();
                     string result = dbAccess.loginUser(usernameTextBox.Text, passwordTextBox.Text);
-                    if (result == "Transaction committed")
+                    if (result == "Transaction Committed. Login successful")
                     {
                         Player.CurrentPlayer = new Player();
                         new lobbyForm().Show();
                         MessageBox.Show("Logged in successfully.", "Success");
                     }
-                    else if (result == "Transaction rolled back")
+                    else if (result == "Transaction rolled back. Login Error")
                     {
                         MessageBox.Show("Failed to log in: " + result, "Error");
                     }

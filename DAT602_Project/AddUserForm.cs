@@ -36,11 +36,11 @@ namespace DAT602_Project
                     var dbAccess = new AdminDAO();
                     string result = dbAccess.addUser(usernameTextBox.Text, passwordTextBox.Text, emailTextBox.Text);
 
-                    if (result == "Transaction committed")
+                    if (result == "Transaction Committed. Added New User")
                     {
                         MessageBox.Show("User added successfully.", "Success");
                     }
-                    else if (result == "Transaction rolled back")
+                    else if (result == "Transaction rolled back. Add User Error")
                     {
                         MessageBox.Show("Failed to add user: " + result, "Error");
                     }

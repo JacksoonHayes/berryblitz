@@ -104,11 +104,11 @@ namespace DAT602_Project
                     {
                         var dbAccess = new AdminDAO();
                         string result = dbAccess.deletePlayer(selectedPlayer.player_id);
-                        if (result == "Transaction committed")
+                        if (result == "Transaction Committed. Player deleted successfully")
                         {
                             MessageBox.Show("User deleted successfully.", "Success");
                         }
-                        else if (result == "Transaction rolled back")
+                        else if (result == "Transaction rolled back. Player Delete Error")
                         {
                             MessageBox.Show("Failed to delete user: " + result, "Error");
                         }
@@ -130,11 +130,11 @@ namespace DAT602_Project
                     {
                         var dbAccess = new AdminDAO();
                         string result = dbAccess.deleteGame(selectedGame.game_id);
-                        if (result == "Transaction committed")
+                        if (result == "Transaction Committed. Game deleted successfully")
                         {
                             MessageBox.Show("Game deleted successfully.", "Success");
                         }
-                        else if (result == "Transaction rolled back")
+                        else if (result == "Transaction rolled back. Delete Game Error")
                         {
                             MessageBox.Show("Failed to delete game: " + result, "Error");
                         }
