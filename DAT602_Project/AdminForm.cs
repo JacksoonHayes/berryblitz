@@ -50,8 +50,15 @@ namespace DAT602_Project
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            new AddUserForm().Show();
-            AdminForm_Load(sender, e);
+            try
+            {
+                new AddUserForm().Show();
+                AdminForm_Load(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while trying to add a game: " + ex.Message, "Error");
+            }
         }
 
         private void editButton_Click(object sender, EventArgs e)
@@ -69,9 +76,14 @@ namespace DAT602_Project
                     selectedPlayer.locked_out,
                     selectedPlayer.is_banned
                 );
-
-                profileForm.ShowDialog(); // Open the ProfileForm as a modal dialog
-                AdminForm_Load(sender, e); // Refresh the listbox after the ProfileForm is closed
+                try {
+                    profileForm.ShowDialog();
+                    AdminForm_Load(sender, e);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while trying to edit the player: " + ex.Message, "Error");
+                }
             }
             else
             {
@@ -92,7 +104,14 @@ namespace DAT602_Project
                     {
                         var dbAccess = new AdminDAO();
                         string result = dbAccess.deletePlayer(selectedPlayer.player_id);
-                        MessageBox.Show(result, "Player deleted successfully");
+                        if (result == "Transaction Committed. Player deleted successfully")
+                        {
+                            MessageBox.Show("User deleted successfully.", "Success");
+                        }
+                        else if (result == "Transaction rolled back. Player Delete Error")
+                        {
+                            MessageBox.Show("Failed to delete user: " + result, "Error");
+                        }
                         AdminForm_Load(sender, e);
                     }
                     catch (Exception ex)
@@ -111,7 +130,14 @@ namespace DAT602_Project
                     {
                         var dbAccess = new AdminDAO();
                         string result = dbAccess.deleteGame(selectedGame.game_id);
-                        MessageBox.Show(result, "Game deleted successfully");
+                        if (result == "Transaction Committed. Game deleted successfully")
+                        {
+                            MessageBox.Show("Game deleted successfully.", "Success");
+                        }
+                        else if (result == "Transaction rolled back. Delete Game Error")
+                        {
+                            MessageBox.Show("Failed to delete game: " + result, "Error");
+                        }
                         AdminForm_Load(sender, e);
                     }
                     catch (Exception ex)

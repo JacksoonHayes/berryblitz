@@ -33,13 +33,17 @@ namespace DAT602_Project
             {
                 var dbAccess = new GameplayDAO();
                 string result = dbAccess.placeItemOnTile(gameId, itemId, row, col);
-                if (result == "Item placed successfully")
+                if (result == "Transaction Committed. Item placed successfully on tile")
                 {
-                    MessageBox.Show(result, "Success");
+                    MessageBox.Show($"Item placed successfully on tile: {row}, {col}", "Success");
+                }
+                else if (result == "Transaction rolled back. Item placing Error")
+                {
+                    MessageBox.Show("Failed to place item: " + result, "Error");
                 }
                 else
                 {
-                    MessageBox.Show(result, "Error");
+                    MessageBox.Show("Unexpected response: " + result, "Info");
                 }
             }
             catch (Exception ex)
@@ -51,22 +55,26 @@ namespace DAT602_Project
 
         private void movePlayerButton_Click(object sender, EventArgs e)
         {
-            int playerId = 1;
-            int gameId = 5;
-            int newRow = 1;
-            int newCol = 1;
+            int playerId = 5;
+            int gameId = 1;
+            int newRow = 8;
+            int newCol = 9;
 
             try {
                 
                 var dbAccess = new GameplayDAO();
                 string result = dbAccess.movePlayer(playerId, gameId, newRow, newCol);
-                if (result == $"Player moved successfully to tile: ({newRow}, {newCol})")
+                if (result == "Transaction Committed. Player moved successfully to new tile")
                 {
-                    MessageBox.Show(result, "Success");
+                    MessageBox.Show($"Player moved successfully to tile: {newRow}, {newCol}", "Success");
+                }
+                else if (result == "Transaction rolled back. Move Player Error")
+                {
+                    MessageBox.Show("Failed to move player: " + result, "Error");
                 }
                 else
                 {
-                    MessageBox.Show(result, "Error");
+                    MessageBox.Show("Unexpected response: " + result, "Info");
                 }
             }
             catch (Exception ex)
@@ -78,19 +86,23 @@ namespace DAT602_Project
         private void acquireItemButton_Click(object sender, EventArgs e)
         {
             int playerID = 1;
-            int tileID = 30;
+            int tileID = 16;
 
             try
             {
                 var dbAccess = new GameplayDAO();
                 string result = dbAccess.acquireItem(playerID, tileID);
-                if (result == "Added to inventory")
+                if (result == "Transaction Committed. Item acquired successfully")
                 {
-                    MessageBox.Show(result, "Success");
+                    MessageBox.Show("Item added to inventory", "Success");
+                }
+                else if (result == "Transaction rolled back. Item Acquisition Error")
+                {
+                    MessageBox.Show("Failed to acquire item: " + result, "Error");
                 }
                 else
                 {
-                    MessageBox.Show(result, "Error");
+                    MessageBox.Show("Unexpected response: " + result, "Info");
                 }
             }
             catch (Exception ex)
@@ -108,13 +120,17 @@ namespace DAT602_Project
             {
                 var dbAccess = new GameplayDAO();
                 string result = dbAccess.updatePlayerScore(playerID, tileID);
-                if (result == "Player score updated by: ', v_points")
+                if (result == "Transaction Committed. Player score updated successfully")
                 {
-                    MessageBox.Show(result, "Success");
+                    MessageBox.Show("Player score updated successfully", "Success");
+                }
+                else if (result == "Transaction rolled back. Score Update Error")
+                {
+                    MessageBox.Show("Failed to update score: " + result, "Error");
                 }
                 else
                 {
-                    MessageBox.Show(result, "Error");
+                    MessageBox.Show("Unexpected response: " + result, "Info");
                 }
             }
             catch (Exception ex)
@@ -136,13 +152,17 @@ namespace DAT602_Project
             {
                 var dbAccess = new GameplayDAO();
                 string result = dbAccess.moveThorns(gameId);
-                if (result == "Thorns (NPC) moved successfully")
+                if (result == "Transaction Committed. Thorns moved successfully")
                 {
-                    MessageBox.Show(result, "Success");
+                    MessageBox.Show("Thorns (NPC) moved successfully", "Success");
+                }
+                else if (result == "Transaction rolled back. Thorns Moving Error")
+                {
+                    MessageBox.Show("Failed to move the thorns: " + result, "Error");
                 }
                 else
                 {
-                    MessageBox.Show(result, "Error");
+                    MessageBox.Show("Unexpected response: " + result, "Info");
                 }
             }
             catch (Exception ex)

@@ -42,9 +42,13 @@ namespace DAT602_Project
                     var dbAccess = new LoginDAO();
                     string result = dbAccess.registerUser(usernameTextBox.Text, passwordTextBox.Text, emailTextBox.Text);
 
-                    if (result == "Added new user")
+                    if (result == "Transaction Committed. Added new user")
                     {
-                        MessageBox.Show(result, "Success");
+                        MessageBox.Show("Account registered successfully.", "Success");
+                    }
+                    else if (result == "Transaction rolled back. Registration Error")
+                    {
+                        MessageBox.Show("Failed to register account: " + result, "Error");
                     }
                     else if(result == "Account with that name already exists!")
                     {

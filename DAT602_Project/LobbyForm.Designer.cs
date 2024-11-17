@@ -37,6 +37,7 @@
             this.logoutButton = new System.Windows.Forms.Button();
             this.joinGameButton = new System.Windows.Forms.Button();
             this.adminButton = new System.Windows.Forms.Button();
+            this.deleteAccountButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // playersListBox
@@ -141,11 +142,22 @@
             this.adminButton.UseVisualStyleBackColor = true;
             this.adminButton.Click += new System.EventHandler(this.adminButton_Click);
             // 
+            // deleteAccountButton
+            // 
+            this.deleteAccountButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.deleteAccountButton.Location = new System.Drawing.Point(220, 260);
+            this.deleteAccountButton.Name = "deleteAccountButton";
+            this.deleteAccountButton.Size = new System.Drawing.Size(122, 27);
+            this.deleteAccountButton.TabIndex = 9;
+            this.deleteAccountButton.Text = "Delete Account";
+            this.deleteAccountButton.UseVisualStyleBackColor = true;
+            // 
             // lobbyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(475, 299);
+            this.Controls.Add(this.deleteAccountButton);
             this.Controls.Add(this.adminButton);
             this.Controls.Add(this.joinGameButton);
             this.Controls.Add(this.logoutButton);
@@ -175,5 +187,6 @@
         private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.Button joinGameButton;
         private System.Windows.Forms.Button adminButton;
+        private System.Windows.Forms.Button deleteAccountButton;
     }
 }

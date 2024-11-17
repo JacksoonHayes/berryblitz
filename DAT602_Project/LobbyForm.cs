@@ -55,14 +55,15 @@ namespace DAT602_Project
                 var dbAccess = new GameplayDAO();
                 string result = dbAccess.makeBoard();
                 lobbyForm_Load(sender, e);
-                if (result == "Created a new game board")
+
+                if (result == "Transaction Committed. Board created successfully")
                 {
-                    MessageBox.Show(result, "Success");
+                    MessageBox.Show("New game create successfully.", "Success");
                     new gameForm().Show();
                 }
-                else
+                else if (result == "Transaction rolled back. Board Creation Error")
                 {
-                    MessageBox.Show(result, "Error");
+                    MessageBox.Show("Failed to create a new game: " + result, "Error");
                 }
             }
             catch (Exception ex)
@@ -73,8 +74,15 @@ namespace DAT602_Project
 
         private void adminButton_Click(object sender, EventArgs e)
         {
-            new adminForm().Show();
-            lobbyForm_Load(sender, e);
+            try {
+                new adminForm().Show();
+                lobbyForm_Load(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while trying to access the admin panel: " + ex.Message, "Error");
+            }
+
         }
 
         private void logoutButton_Click(object sender, EventArgs e)
